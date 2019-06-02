@@ -22,18 +22,30 @@ namespace QuanLyKhachSan.GUI
             
         }
 
-        private void btnThemTaiKhoan_Click(object sender, EventArgs e)
+        private void dgvDanhSachTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvDanhSachTaiKhoan.CurrentCell.RowIndex;
+            txtTenTK.Text = dgvDanhSachTaiKhoan.Rows[i].Cells[0].Value.ToString().Trim();
+            txtMatKhau.Text = dgvDanhSachTaiKhoan.Rows[i].Cells[1].Value.ToString().Trim();
+            if (dgvDanhSachTaiKhoan.Rows[i].Cells[2].Value.ToString().Trim() == "Admin")
+            {
+                rdiAdmin.Checked = true;
+            }
+            else rdiNhanVien.Checked = true;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             TaiKhoan tk = new TaiKhoan();
             tk.TenTK = txtTenTK.Text.Trim();
             tk.MatKhau = txtMatKhau.Text.Trim();
-            if(rdiAdmin.Checked == true)
+            if (rdiAdmin.Checked == true)
             {
                 tk.Quyen = "Admin";
             }
             else tk.Quyen = "Nhân Viên";
             int kq = dal_TaiKhoan.ThemTaiKhoan(tk);
-            if(kq == 1)
+            if (kq == 1)
             {
                 dgvDanhSachTaiKhoan.DataSource = dal_TaiKhoan.ThongTinCacTaiKhoan();
                 MessageBox.Show("Thêm tài khoản thành công!");
@@ -42,10 +54,9 @@ namespace QuanLyKhachSan.GUI
             {
                 MessageBox.Show("Thêm tài khoản thất bại");
             }
-
         }
 
-        private void btnSuaTaiKhoan_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
             TaiKhoan tk = new TaiKhoan();
             tk.TenTK = txtTenTK.Text.Trim();
@@ -60,7 +71,7 @@ namespace QuanLyKhachSan.GUI
             MessageBox.Show("Sửa tài khoản thành công!");
         }
 
-        private void btnXoaTaiKhoan_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             TaiKhoan tk = new TaiKhoan();
             tk.TenTK = txtTenTK.Text.Trim();
@@ -69,24 +80,9 @@ namespace QuanLyKhachSan.GUI
             MessageBox.Show("Xóa tài khoản thành công!");
         }
 
-        private void btnTroVe_Click(object sender, EventArgs e)
+        private void btnTroVe_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void dgvDanhSachTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = dgvDanhSachTaiKhoan.CurrentCell.RowIndex;
-            txtTenTK.Text = dgvDanhSachTaiKhoan.Rows[i].Cells[0].Value.ToString().Trim();
-            txtMatKhau.Text = dgvDanhSachTaiKhoan.Rows[i].Cells[1].Value.ToString().Trim();
-            if (dgvDanhSachTaiKhoan.Rows[i].Cells[2].Value.ToString().Trim() == "Admin")
-            {
-                rdiAdmin.Checked = true;
-            }
-            else rdiNhanVien.Checked = true;
-        }
-
-
-
     }
 }

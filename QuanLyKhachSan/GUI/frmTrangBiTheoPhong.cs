@@ -53,7 +53,20 @@ namespace QuanLyKhachSan.GUI
             this.Close();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+
+        private void dgvDanhSachTrangBi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dgvDanhSachTrangBi.CurrentCell.RowIndex;
+            TrangBiTheoPhong tb = new TrangBiTheoPhong();
+            tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
+            tb.MaTB = dgvDanhSachTrangBi.Rows[i].Cells[1].Value.ToString().Trim();
+            dal_TrangBiTheoPhong.XoaDichVuChoPhong(tb);
+
+            //cập nhật lại bảng danh sách
+            dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
         {
             TrangBiTheoPhong tb = new TrangBiTheoPhong();
             tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
@@ -71,18 +84,16 @@ namespace QuanLyKhachSan.GUI
             dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
         }
 
-        private void dgvDanhSachTrangBi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnTroVe_Click_1(object sender, EventArgs e)
         {
-            int i = dgvDanhSachTrangBi.CurrentCell.RowIndex;
-            TrangBiTheoPhong tb = new TrangBiTheoPhong();
-            tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
-            tb.MaTB = dgvDanhSachTrangBi.Rows[i].Cells[1].Value.ToString().Trim();
-            dal_TrangBiTheoPhong.XoaDichVuChoPhong(tb);
-
-            //cập nhật lại bảng danh sách
-            dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
+            this.Close();
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
 
+        }
     }
+
+
 }

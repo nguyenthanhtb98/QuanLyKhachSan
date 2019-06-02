@@ -23,35 +23,18 @@ namespace QuanLyKhachSan.GUI
 
         private void btnThemTrangBi_Click(object sender, EventArgs e)
         {
-            TrangBi tb = new TrangBi();          
-            tb.TenTB = txtTenTB.Text.Trim();
-            dal_TrangBi.ThemTrangBi(tb);
-            //cập nhật
-            dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
-            MessageBox.Show("Thêm trang bị thành công!");            
+         
         }
 
         private void btnXoaTrangBi_Click(object sender, EventArgs e)
         {
-            TrangBi tb = new TrangBi();
-            tb.MaTB = dgvDanhSachTrangBi.Rows[dgvDanhSachTrangBi.CurrentCell.RowIndex].Cells["MaTB"].Value.ToString().Trim();
-            tb.TenTB = txtTenTB.Text.Trim();
-            dal_TrangBi.XoaTrangBi(tb);
-            //cập nhật
-            dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
-            MessageBox.Show("Xóa trang bị thành công!");
+
 
         }
 
         private void btnSuaTrangBi_Click(object sender, EventArgs e)
         {
-            TrangBi tb = new TrangBi();
-            tb.MaTB = dgvDanhSachTrangBi.Rows[dgvDanhSachTrangBi.CurrentCell.RowIndex].Cells["MaTB"].Value.ToString().Trim();
-            tb.TenTB = txtTenTB.Text.Trim();
-            dal_TrangBi.SuaTrangBi(tb);
-            //cập nhật
-            dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
-            MessageBox.Show("Sửa trang bị thành công!");
+
         }
 
         private void btnTroVe_Click(object sender, EventArgs e)
@@ -65,5 +48,41 @@ namespace QuanLyKhachSan.GUI
             txtTenTB.Text = dgvDanhSachTrangBi.Rows[i].Cells[1].Value.ToString().Trim();
         }
 
+        private void btnTroVe_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            TrangBi tb = new TrangBi();
+            tb.TenTB = txtTenTB.Text.Trim();
+            dal_TrangBi.ThemTrangBi(tb);
+            //cập nhật
+            dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
+            MessageBox.Show("Thêm trang bị thành công!");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            TrangBi tb = new TrangBi();
+            tb.MaTB = dgvDanhSachTrangBi.Rows[dgvDanhSachTrangBi.CurrentCell.RowIndex].Cells["MaTB"].Value.ToString().Trim();
+            tb.TenTB = txtTenTB.Text.Trim();
+            dal_TrangBi.XoaTrangBi(tb);
+            //cập nhật
+            dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
+            MessageBox.Show("Xóa trang bị thành công!");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            TrangBi tb = new TrangBi();
+            tb.MaTB = dgvDanhSachTrangBi.Rows[dgvDanhSachTrangBi.CurrentCell.RowIndex].Cells["MaTB"].Value.ToString().Trim();
+            tb.TenTB = txtTenTB.Text.Trim();
+            dal_TrangBi.SuaTrangBi(tb);
+            //cập nhật
+            dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
+            MessageBox.Show("Sửa trang bị thành công!");
+        }
     }
 }

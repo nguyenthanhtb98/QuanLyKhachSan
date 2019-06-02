@@ -209,5 +209,15 @@ namespace QuanLyKhachSan.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Visualpharm_Must_Have_Log_Out {
+            get {
+                object obj = ResourceManager.GetObject("Visualpharm-Must-Have-Log-Out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

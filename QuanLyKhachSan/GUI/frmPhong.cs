@@ -30,7 +30,19 @@ namespace QuanLyKhachSan.GUI
             cboLoaiPhong.ValueMember = "MaLP";
         }
 
-        private void btnThemPhong_Click(object sender, EventArgs e)
+
+        private void dgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvPhong.CurrentCell.RowIndex;
+            txtTenPhong.Text = dgvPhong.Rows[index].Cells[1].Value.ToString();
+            cboTrangThaiPhong.Text = dgvPhong.Rows[index].Cells[2].Value.ToString();
+            txtGiaTheoGio.Text = dgvPhong.Rows[index].Cells[3].Value.ToString();
+            txtGiaTheoNgay.Text = dgvPhong.Rows[index].Cells[4].Value.ToString(); 
+            cboLoaiPhong.Text = dgvPhong.Rows[index].Cells[5].Value.ToString();
+        }
+
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -48,39 +60,9 @@ namespace QuanLyKhachSan.GUI
             {
                 MessageBox.Show("Lỗi");
             }
-
         }
 
-        private void dgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = dgvPhong.CurrentCell.RowIndex;
-            txtTenPhong.Text = dgvPhong.Rows[index].Cells[1].Value.ToString();
-            cboTrangThaiPhong.Text = dgvPhong.Rows[index].Cells[2].Value.ToString();
-            txtGiaTheoGio.Text = dgvPhong.Rows[index].Cells[3].Value.ToString();
-            txtGiaTheoNgay.Text = dgvPhong.Rows[index].Cells[4].Value.ToString(); 
-            cboLoaiPhong.Text = dgvPhong.Rows[index].Cells[5].Value.ToString();
-        }
-
-        private void btnXoaPhong_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int i = dgvPhong.CurrentCell.RowIndex;
-                Phong p = new Phong();
-                p.MaPhong = dgvPhong.Rows[i].Cells["MaPhong"].Value.ToString();
-                dal_phong.XoaPhong(p);
-                dgvPhong.DataSource = dal_phong.ThongTinCacPhong();
-                MessageBox.Show("Xóa phòng có mã " + p.MaPhong.Trim() + " thành công");
-            }
-            catch (Exception)
-            {
-                
-                throw;
-            }
-
-        }
-
-        private void btnSuaPhong_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
             try
             {
@@ -98,18 +80,32 @@ namespace QuanLyKhachSan.GUI
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
-
         }
 
-        private void btnTroVe_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i = dgvPhong.CurrentCell.RowIndex;
+                Phong p = new Phong();
+                p.MaPhong = dgvPhong.Rows[i].Cells["MaPhong"].Value.ToString();
+                dal_phong.XoaPhong(p);
+                dgvPhong.DataSource = dal_phong.ThongTinCacPhong();
+                MessageBox.Show("Xóa phòng có mã " + p.MaPhong.Trim() + " thành công");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
-        
     }
 }

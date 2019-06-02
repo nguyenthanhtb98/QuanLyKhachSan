@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.GUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,8 +18,8 @@ namespace QuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmMenu());
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmMenu2());
+            //Application.Run(new frmDangNhap());
         }
     }
 }
