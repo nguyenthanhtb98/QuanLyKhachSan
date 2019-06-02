@@ -89,5 +89,40 @@ namespace QuanLyKhachSan.GUI
                 frm.Show();
             }
         }
+
+        private void btnThuePhong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmThuePhong frm = new frmThuePhong();
+            if (FormConChuaMo(frm))
+            {
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void btnThanhToan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmThanhToan frm = new frmThanhToan();
+            if (FormConChuaMo(frm))
+            {
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void btnSDDV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmSuDungDichVu frm = new frmSuDungDichVu();
+            if (FormConChuaMo(frm))
+            {
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

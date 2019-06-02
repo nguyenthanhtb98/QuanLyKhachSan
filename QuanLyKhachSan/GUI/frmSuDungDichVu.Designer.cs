@@ -31,11 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuDungDichVu));
             this.pnlDichVu = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvDichVuDaSuDung = new System.Windows.Forms.DataGridView();
             this.SDDV_MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +47,6 @@
             this.TenDV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboLoaiDV = new System.Windows.Forms.ComboBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.MaPT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +59,10 @@
             this.NgayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhThucThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
             this.pnlDichVu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaSuDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTenDV)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
@@ -74,36 +70,24 @@
             // pnlDichVu
             // 
             this.pnlDichVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pnlDichVu.Controls.Add(this.label7);
             this.pnlDichVu.Controls.Add(this.label6);
             this.pnlDichVu.Controls.Add(this.label4);
-            this.pnlDichVu.Controls.Add(this.pictureBox1);
             this.pnlDichVu.Controls.Add(this.dgvDichVuDaSuDung);
             this.pnlDichVu.Controls.Add(this.label2);
             this.pnlDichVu.Controls.Add(this.dgvTenDV);
             this.pnlDichVu.Controls.Add(this.cboLoaiDV);
-            this.pnlDichVu.Location = new System.Drawing.Point(241, 59);
+            this.pnlDichVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDichVu.Location = new System.Drawing.Point(0, 0);
             this.pnlDichVu.Name = "pnlDichVu";
-            this.pnlDichVu.Size = new System.Drawing.Size(751, 510);
+            this.pnlDichVu.Size = new System.Drawing.Size(1136, 544);
             this.pnlDichVu.TabIndex = 41;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(15, 355);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "(Trở Về)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(12, 43);
+            this.label6.Location = new System.Drawing.Point(363, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 19);
             this.label6.TabIndex = 8;
@@ -113,22 +97,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(484, 43);
+            this.label4.Location = new System.Drawing.Point(895, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Các dịch vụ đã sử dụng";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::QuanLyKhachSan.Properties.Resources.back_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 296);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 56);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dgvDichVuDaSuDung
             // 
@@ -151,7 +124,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDichVuDaSuDung.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDichVuDaSuDung.Location = new System.Drawing.Point(407, 78);
+            this.dgvDichVuDaSuDung.Location = new System.Drawing.Point(800, 86);
             this.dgvDichVuDaSuDung.Name = "dgvDichVuDaSuDung";
             this.dgvDichVuDaSuDung.ReadOnly = true;
             this.dgvDichVuDaSuDung.RowHeadersVisible = false;
@@ -210,7 +183,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(170, 43);
+            this.label2.Location = new System.Drawing.Point(537, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(186, 19);
             this.label2.TabIndex = 3;
@@ -235,12 +208,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTenDV.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTenDV.Location = new System.Drawing.Point(113, 78);
+            this.dgvTenDV.Location = new System.Drawing.Point(480, 86);
             this.dgvTenDV.Name = "dgvTenDV";
             this.dgvTenDV.ReadOnly = true;
             this.dgvTenDV.RowHeadersVisible = false;
             this.dgvTenDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTenDV.Size = new System.Drawing.Size(288, 296);
+            this.dgvTenDV.Size = new System.Drawing.Size(303, 296);
             this.dgvTenDV.TabIndex = 2;
             this.dgvTenDV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenDV_CellDoubleClick);
             // 
@@ -266,7 +239,7 @@
             this.cboLoaiDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiDV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboLoaiDV.FormattingEnabled = true;
-            this.cboLoaiDV.Location = new System.Drawing.Point(14, 78);
+            this.cboLoaiDV.Location = new System.Drawing.Point(365, 86);
             this.cboLoaiDV.Name = "cboLoaiDV";
             this.cboLoaiDV.Size = new System.Drawing.Size(83, 21);
             this.cboLoaiDV.TabIndex = 1;
@@ -281,35 +254,15 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 32;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Wheat;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(995, 59);
-            this.panel2.TabIndex = 42;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(386, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "SỬ DỤNG DỊCH VỤ";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel3.Controls.Add(this.btnTroVe);
             this.panel3.Controls.Add(this.dgvKhachHang);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 59);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 447);
+            this.panel3.Size = new System.Drawing.Size(357, 544);
             this.panel3.TabIndex = 43;
             // 
             // dgvKhachHang
@@ -343,7 +296,7 @@
             this.dgvKhachHang.ReadOnly = true;
             this.dgvKhachHang.RowHeadersVisible = false;
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKhachHang.Size = new System.Drawing.Size(229, 175);
+            this.dgvKhachHang.Size = new System.Drawing.Size(339, 304);
             this.dgvKhachHang.TabIndex = 10;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
@@ -426,13 +379,24 @@
             this.HinhThucThue.Name = "HinhThucThue";
             this.HinhThucThue.ReadOnly = true;
             // 
+            // btnTroVe
+            // 
+            this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTroVe.Appearance.Options.UseFont = true;
+            this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
+            this.btnTroVe.Location = new System.Drawing.Point(244, 403);
+            this.btnTroVe.Name = "btnTroVe";
+            this.btnTroVe.Size = new System.Drawing.Size(101, 38);
+            this.btnTroVe.TabIndex = 28;
+            this.btnTroVe.Text = "Trở về";
+            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
+            // 
             // frmSuDungDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 506);
+            this.ClientSize = new System.Drawing.Size(1136, 544);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlDichVu);
             this.Name = "frmSuDungDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -440,11 +404,8 @@
             this.Load += new System.EventHandler(this.SuDungDichVu_Load);
             this.pnlDichVu.ResumeLayout(false);
             this.pnlDichVu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaSuDung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTenDV)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.ResumeLayout(false);
@@ -468,11 +429,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewImageColumn XoaDV;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
@@ -484,6 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDen;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhThucThue;
-
+        private DevExpress.XtraEditors.SimpleButton btnTroVe;
     }
 }
