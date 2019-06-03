@@ -192,7 +192,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "frmTrangBi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTrangBi";
+            this.Text = "Quản lý trang bị";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

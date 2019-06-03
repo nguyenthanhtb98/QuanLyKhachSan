@@ -83,7 +83,7 @@
             this.Controls.Add(this.button1);
             this.Name = "frmSDDV_SoLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSDDV_SoLuong";
+            this.Text = "Số lượng dịch vụ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

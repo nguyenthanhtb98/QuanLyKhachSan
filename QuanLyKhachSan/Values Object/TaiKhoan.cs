@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan.Values_Object
 {
-    class TaiKhoan
+    public class TaiKhoan
     {
         private string _TenTK;
 

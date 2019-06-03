@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyKhachSan.DAL;
+using QuanLyKhachSan.GUI;
+using QuanLyKhachSan.Values_Object;
 
 namespace QuanLyKhachSan
 {
@@ -16,6 +18,7 @@ namespace QuanLyKhachSan
     {
         private KetNoiCSDL conn = new KetNoiCSDL();
         private DAL_TaiKhoan dal_TaiKhoan = new DAL_TaiKhoan();
+        
         public frmDangNhap()
         {
             InitializeComponent();
@@ -27,20 +30,29 @@ namespace QuanLyKhachSan
             {
                 if(conn.GetValue("Select * from TAIKHOAN where TenTK = '"+ txtTenDangNhap.Text + "'" + "and MatKhau = " + "'" + txtMatKhau.Text + "'") != "")
                 {
+                    
+                    //tạo đối tượng tài khoản để lưu thông tin
+                    TaiKhoan taikhoan = new TaiKhoan();
+                    taikhoan.TenTK = txtTenDangNhap.Text;
+                    taikhoan.MatKhau = txtMatKhau.Text;
+                    taikhoan.Quyen = dal_TaiKhoan.LayQuyenTaiKhoan(txtTenDangNhap.Text);
+
+                    //truyền thông tin tài khoản về form menu
                     this.Hide();
-                    dal_TaiKhoan.LayQuyenTaiKhoan(txtTenDangNhap.Text);
-                    Form frm = new frmMenu(txtTenDangNhap.Text.Trim(),dal_TaiKhoan.LayQuyenTaiKhoan(txtTenDangNhap.Text));
+                    frmMenu2 frm = new frmMenu2();
+                    frm.LayThongTinTaiKhoan(taikhoan);
                     frm.ShowDialog();
-                    this.Show();
+                    this.Close();
+
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
+                    MessageBox.Show("Đăng nhập thất bại! Tài khoản hoặc mật khẩu không đúng");
                 }
             }
             catch (Exception )
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi cơ sở dữ liệu ");
             }
 
         }

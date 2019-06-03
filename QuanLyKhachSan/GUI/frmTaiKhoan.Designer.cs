@@ -267,7 +267,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "frmTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TAIKHOAN";
+            this.Text = "Quản lý tài khoản";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

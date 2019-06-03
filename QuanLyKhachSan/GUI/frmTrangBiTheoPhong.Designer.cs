@@ -252,7 +252,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmTrangBiTheoPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TRANG BỊ TỪNG PHÒNG";
+            this.Text = "Trang bị từng phòng";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachTrangBi)).EndInit();
             this.pnlThemTrangBiTheoPhong.ResumeLayout(false);

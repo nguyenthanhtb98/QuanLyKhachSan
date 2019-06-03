@@ -323,7 +323,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "frmPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPhong";
+            this.Text = "Quản lý phòng";
             this.Load += new System.EventHandler(this.frmPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
             this.panel2.ResumeLayout(false);

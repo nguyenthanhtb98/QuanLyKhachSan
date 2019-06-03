@@ -8,17 +8,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using QuanLyKhachSan.Values_Object;
 
 namespace QuanLyKhachSan.GUI
 {
     public partial class frmMenu2 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private TaiKhoan TK = new TaiKhoan();
         public frmMenu2()
         {
             InitializeComponent();
         }
 
-
+        public void LayThongTinTaiKhoan(TaiKhoan taikhoan)
+        {
+            TK.TenTK = taikhoan.TenTK;
+            TK.MatKhau = taikhoan.MatKhau;
+            TK.Quyen = taikhoan.Quyen;
+        }
 
         private void btnThoat_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -26,13 +33,11 @@ namespace QuanLyKhachSan.GUI
         }
 
         private void btnTrangBi_ItemClick(object sender, ItemClickEventArgs e)
-        {
+        {           
             frmTrangBi frm = new frmTrangBi();
             DongHetCacFormConKhac();
             frm.MdiParent = this;
             frm.Show();
-            
-
         }
 
         /// <summary>
@@ -110,12 +115,37 @@ namespace QuanLyKhachSan.GUI
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
+            this.Hide();           
+            frmDangNhap frm = new frmDangNhap();
+            frm.ShowDialog();
+            this.Close();
 
         }
 
         private void btnKhachHang_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmKhachHang frm = new frmKhachHang();
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void frmMenu2_Load(object sender, EventArgs e)
+        {
+            txtTenTaiKhoan.Caption = "XIN CHÀO "+ TK.TenTK;
+            if(TK.Quyen != "Admin")
+            {
+                rbbQuanLy.Visible = false;
+            }
+            else
+            {
+                rbbQuanLy.Visible = true;
+            }
+        }
+
+        private void btnTroGiup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmTroGiup frm = new frmTroGiup();
             DongHetCacFormConKhac();
             frm.MdiParent = this;
             frm.Show();

@@ -63,6 +63,10 @@
             this.GiaTheoGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaTheoNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDichVuDaSuDung = new System.Windows.Forms.DataGridView();
+            this.SDDV_MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -70,10 +74,6 @@
             this.btnTroVe = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.SDDV_MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThanhToan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -452,6 +452,41 @@
             this.dgvDichVuDaSuDung.Size = new System.Drawing.Size(335, 240);
             this.dgvDichVuDaSuDung.TabIndex = 11;
             // 
+            // SDDV_MaDV
+            // 
+            this.SDDV_MaDV.DataPropertyName = "MaDV";
+            this.SDDV_MaDV.HeaderText = "Mã Dịch Vụ";
+            this.SDDV_MaDV.Name = "SDDV_MaDV";
+            this.SDDV_MaDV.ReadOnly = true;
+            this.SDDV_MaDV.Visible = false;
+            // 
+            // TenDV2
+            // 
+            this.TenDV2.DataPropertyName = "TenDV";
+            this.TenDV2.FillWeight = 167.9175F;
+            this.TenDV2.HeaderText = "Tên Dịch Vụ";
+            this.TenDV2.Name = "TenDV2";
+            this.TenDV2.ReadOnly = true;
+            this.TenDV2.Width = 130;
+            // 
+            // GiaDV
+            // 
+            this.GiaDV.DataPropertyName = "GiaDV";
+            this.GiaDV.FillWeight = 123.7574F;
+            this.GiaDV.HeaderText = "Giá Dịch Vụ";
+            this.GiaDV.Name = "GiaDV";
+            this.GiaDV.ReadOnly = true;
+            this.GiaDV.Width = 110;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.FillWeight = 121.8219F;
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 90;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -525,41 +560,6 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // SDDV_MaDV
-            // 
-            this.SDDV_MaDV.DataPropertyName = "MaDV";
-            this.SDDV_MaDV.HeaderText = "Mã Dịch Vụ";
-            this.SDDV_MaDV.Name = "SDDV_MaDV";
-            this.SDDV_MaDV.ReadOnly = true;
-            this.SDDV_MaDV.Visible = false;
-            // 
-            // TenDV2
-            // 
-            this.TenDV2.DataPropertyName = "TenDV";
-            this.TenDV2.FillWeight = 167.9175F;
-            this.TenDV2.HeaderText = "Tên Dịch Vụ";
-            this.TenDV2.Name = "TenDV2";
-            this.TenDV2.ReadOnly = true;
-            this.TenDV2.Width = 130;
-            // 
-            // GiaDV
-            // 
-            this.GiaDV.DataPropertyName = "GiaDV";
-            this.GiaDV.FillWeight = 123.7574F;
-            this.GiaDV.HeaderText = "Giá Dịch Vụ";
-            this.GiaDV.Name = "GiaDV";
-            this.GiaDV.ReadOnly = true;
-            this.GiaDV.Width = 110;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.FillWeight = 121.8219F;
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 90;
-            // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,7 +570,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "frmThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThanhToan";
+            this.Text = "Thanh toán";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThanhToan)).EndInit();

@@ -33,7 +33,9 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rdiNu = new System.Windows.Forms.RadioButton();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.rdiNam = new System.Windows.Forms.RadioButton();
+            this.btnXacNhanThue = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.GiaTheoGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaTheoNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnQuayLai = new System.Windows.Forms.Button();
-            this.btnXacNhanThue = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuePhong)).BeginInit();
@@ -110,6 +110,19 @@
             this.rdiNu.Text = "Nữ";
             this.rdiNu.UseVisualStyleBackColor = true;
             // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnQuayLai.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnQuayLai.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Location = new System.Drawing.Point(162, 452);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(143, 44);
+            this.btnQuayLai.TabIndex = 45;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = false;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click_1);
+            // 
             // rdiNam
             // 
             this.rdiNam.AutoSize = true;
@@ -121,6 +134,19 @@
             this.rdiNam.TabStop = true;
             this.rdiNam.Text = "Nam";
             this.rdiNam.UseVisualStyleBackColor = true;
+            // 
+            // btnXacNhanThue
+            // 
+            this.btnXacNhanThue.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnXacNhanThue.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnXacNhanThue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhanThue.Location = new System.Drawing.Point(12, 452);
+            this.btnXacNhanThue.Name = "btnXacNhanThue";
+            this.btnXacNhanThue.Size = new System.Drawing.Size(144, 44);
+            this.btnXacNhanThue.TabIndex = 44;
+            this.btnXacNhanThue.Text = "Xác Nhận Thuê";
+            this.btnXacNhanThue.UseVisualStyleBackColor = false;
+            this.btnXacNhanThue.Click += new System.EventHandler(this.btnXacNhanThue_Click_1);
             // 
             // label5
             // 
@@ -365,32 +391,6 @@
             this.TenLoaiPhong.HeaderText = "Loại Phòng";
             this.TenLoaiPhong.Name = "TenLoaiPhong";
             // 
-            // btnQuayLai
-            // 
-            this.btnQuayLai.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnQuayLai.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnQuayLai.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(162, 452);
-            this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(143, 44);
-            this.btnQuayLai.TabIndex = 45;
-            this.btnQuayLai.Text = "Quay Lại";
-            this.btnQuayLai.UseVisualStyleBackColor = false;
-            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click_1);
-            // 
-            // btnXacNhanThue
-            // 
-            this.btnXacNhanThue.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnXacNhanThue.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnXacNhanThue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhanThue.Location = new System.Drawing.Point(12, 452);
-            this.btnXacNhanThue.Name = "btnXacNhanThue";
-            this.btnXacNhanThue.Size = new System.Drawing.Size(144, 44);
-            this.btnXacNhanThue.TabIndex = 44;
-            this.btnXacNhanThue.Text = "Xác Nhận Thuê";
-            this.btnXacNhanThue.UseVisualStyleBackColor = false;
-            this.btnXacNhanThue.Click += new System.EventHandler(this.btnXacNhanThue_Click_1);
-            // 
             // frmThuePhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +400,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "frmThuePhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ThuePhong";
+            this.Text = "Thuê phòng";
             this.Load += new System.EventHandler(this.ThuePhong_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

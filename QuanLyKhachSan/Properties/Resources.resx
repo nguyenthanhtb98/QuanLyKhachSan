@@ -136,11 +136,20 @@
   <data name="office1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\office1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="img_HDThuePhong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_HDThuePhong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_couch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_couch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_holiday-hotel-bell-service_3211404" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_holiday-hotel-bell-service_3211404.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cash_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cash_register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="img_HDThanhToan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_HDThanhToan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Visualpharm-Must-Have-Log-Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Visualpharm-Must-Have-Log-Out.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +160,8 @@
   <data name="iconfinder_user_male_3699" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_user_male_3699.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_couch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red_couch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cash_register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash_register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_go-home_118770" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_go-home_118770.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +172,7 @@
   <data name="iconfinder_key_309058" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_key_309058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Visualpharm-Must-Have-Log-Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Visualpharm-Must-Have-Log-Out.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="img_HDSDDV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_HDSDDV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

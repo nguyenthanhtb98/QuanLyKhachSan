@@ -328,7 +328,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "frmKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmKHACHHANG";
+            this.Text = "Quản lý khách hàng";
             this.Load += new System.EventHandler(this.frmKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.panel2.ResumeLayout(false);
