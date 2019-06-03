@@ -18,6 +18,7 @@ namespace QuanLyKhachSan.GUI
         private DAL_Phong dal_Phong = new DAL_Phong();
         private DAL_KhachHang dal_KhachHang = new DAL_KhachHang();
         private DAL_PhieuThue dal_PhieuThue = new DAL_PhieuThue();
+        private DAL_SuDungDichVu dal_SDDV = new DAL_SuDungDichVu();
         private HoaDon HD = new HoaDon();
 
         public void LayDuLieuTuFormThanhToanVaoFormHoaDon(HoaDon _HD)
@@ -32,6 +33,7 @@ namespace QuanLyKhachSan.GUI
             HD.TienDV = _HD.TienDV;
             HD.TienPhong = _HD.TienPhong;
             HD.TongTienTT = _HD.TongTienTT;
+            HD.NgayTT = _HD.NgayTT;
         }
         public frmHoaDon()
         {
@@ -47,7 +49,7 @@ namespace QuanLyKhachSan.GUI
             lblTienDV.Text = HD.TienDV.ToString();
             lblTienPhong.Text = HD.TienPhong.ToString();
             lblTongTienTT.Text = HD.TongTienTT.ToString();
-            lblNgayTT.Text = DateTime.Now.ToString();
+            lblNgayTT.Text = HD.NgayTT.ToString();
         }
         //private string MaPT; //tạo biến lưu mã phiếu thuê từ form Thanh toán
         
@@ -63,7 +65,7 @@ namespace QuanLyKhachSan.GUI
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             //các nội dung cần thay đổi khi thanh toán: Thông tin về trạng thái của phòng
-            //Xóa thông tin khách hàng trong bảng khách hàng, xóa thông tin phiếu thuê trong bảng phiếu thuê
+            //Xóa thông tin khách hàng trong bảng khách hàng,sử dụng dịch vụ trong bảng SDDV, xóa thông tin phiếu thuê trong bảng phiếu thuê
             //chèn dữ liệu vào bảng thanh toán: thông tin gồm: tên khách hàng, giới tính, ngày thanh toán, sđt, tổng tiền
       
             //thêm thông tin vào bảng phiếu thanh toán
@@ -78,6 +80,11 @@ namespace QuanLyKhachSan.GUI
 
             //sửa lại thông tin các phòng sau khi thanh toán, đặt trạng thái phòng về còn trống và đặt mã phiếu thuê về null
             dal_Phong.SuaCacPhongSauThanhToan(HD.MaPT);
+            //xóa thông tin sử dụng dịch vụ
+            SuDungDichVu SDDV = new SuDungDichVu();
+            SDDV.MaPT = HD.MaPT;
+            dal_SDDV.XoaSuDungDichVuTheoMaPT(SDDV);
+
             //xóa thông tin phiếu thuê trong CSDL
             PhieuThue PT = new PhieuThue();
             PT.MaPT = HD.MaPT;

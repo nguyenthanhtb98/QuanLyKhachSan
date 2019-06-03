@@ -27,12 +27,16 @@ namespace QuanLyKhachSan.GUI
             dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
 
             //lấy dữ liệu của phiếu thuê đầu tiên
-            string str_mapt = dgvPhieuThanhToan.Rows[0].Cells[0].Value.ToString().Trim();
-            lblTenKH.Text = dgvPhieuThanhToan.Rows[0].Cells[2].Value.ToString().Trim();
-            dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
-            dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
-            lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
-            lblTienPhong.Text =  string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+            if(dgvPhieuThanhToan.RowCount>0)
+            {
+                string str_mapt = dgvPhieuThanhToan.Rows[0].Cells[0].Value.ToString().Trim();
+                lblTenKH.Text = dgvPhieuThanhToan.Rows[0].Cells[2].Value.ToString().Trim();
+                dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
+                dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
+                lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
+                lblTienPhong.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,6 +72,7 @@ namespace QuanLyKhachSan.GUI
             hd.SDT = dgvPhieuThanhToan.Rows[i].Cells[4].Value.ToString().Trim();
             hd.Email = dgvPhieuThanhToan.Rows[i].Cells[5].Value.ToString().Trim();
             hd.CMND = dgvPhieuThanhToan.Rows[i].Cells[6].Value.ToString().Trim();
+            hd.NgayTT = Convert.ToDateTime(DateTime.Now.ToString());
             hd.TienPhong = dal_ThanhToan.TinhTienPhong(str_mapt.Trim());
             hd.TienDV = dal_ThanhToan.TinhTienDichVu(str_mapt.Trim());
             hd.TongTienTT = hd.TienPhong + hd.TienDV;
@@ -78,13 +83,17 @@ namespace QuanLyKhachSan.GUI
          
             //cập nhật lại thông tin danh sách người đang thuê phòng và các thông tin phòng dịch vụ
             dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
-            i = dgvPhieuThanhToan.CurrentCell.RowIndex;
-            str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
-            lblTenKH.Text = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
-            dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
-            dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
-            lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
-            lblTienPhong.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+            if(dgvPhieuThanhToan.RowCount>0) // tránh trường hợp không có gì gây lỗi
+            {
+                i = dgvPhieuThanhToan.CurrentCell.RowIndex;
+                str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
+                lblTenKH.Text = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
+                dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
+                dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
+                lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
+                lblTienPhong.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+            }
+
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)

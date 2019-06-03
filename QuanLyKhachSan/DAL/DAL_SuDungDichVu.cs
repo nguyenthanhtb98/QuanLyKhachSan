@@ -30,5 +30,11 @@ namespace QuanLyKhachSan.DAL
         {
             return conn.ThucHienLenh("Delete from SUDUNGDV where MaPT= '"+sddv.MaPT+"' and MaDV = '" + sddv.MaDV + "'");
         }
+        //hàm này dùng để xóa dịch vụ khi thanh toán
+        public int XoaSuDungDichVuTheoMaPT(SuDungDichVu sddv)
+        {
+            return conn.ThucHienLenh("Delete from SUDUNGDV where MaPT= '" + sddv.MaPT + "'");
+        }
+
     }
 }
