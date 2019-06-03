@@ -301,7 +301,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBi);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBiTheoPhong);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.CaptionButtonClick += new DevExpress.XtraBars.Ribbon.RibbonPageGroupEventHandler(this.ribbonPageGroup2_CaptionButtonClick);
+
             // 
             // ribbonPage3
             // 

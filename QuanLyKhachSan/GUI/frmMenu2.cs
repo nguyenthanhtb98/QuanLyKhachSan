@@ -19,12 +19,6 @@ namespace QuanLyKhachSan.GUI
         }
 
 
-        private void ribbonPageGroup2_CaptionButtonClick(object sender, DevExpress.XtraBars.Ribbon.RibbonPageGroupEventArgs e)
-        {
-            frmPhong frm = new frmPhong();
-            frm.MdiParent = this;
-            frm.Show();
-        }
 
         private void btnThoat_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -34,11 +28,10 @@ namespace QuanLyKhachSan.GUI
         private void btnTrangBi_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmTrangBi frm = new frmTrangBi();
-            if(FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
+            
 
         }
 
@@ -59,65 +52,60 @@ namespace QuanLyKhachSan.GUI
             return true;
         }
 
+        private void DongHetCacFormConKhac()
+        {
+            foreach (var item in MdiChildren)
+            {
+                item.Close();
+            }
+        }
         private void btnPhong_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmPhong frm = new frmPhong();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
 
         }
 
         private void btnTrangBiTheoPhong_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmTrangBiTheoPhong frm = new frmTrangBiTheoPhong();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void btnTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmTaiKhoan frm = new frmTaiKhoan();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void btnThuePhong_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmThuePhong frm = new frmThuePhong();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void btnThanhToan_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmThanhToan frm = new frmThanhToan();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void btnSDDV_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmSuDungDichVu frm = new frmSuDungDichVu();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
@@ -128,11 +116,9 @@ namespace QuanLyKhachSan.GUI
         private void btnKhachHang_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmKhachHang frm = new frmKhachHang();
-            if (FormConChuaMo(frm))
-            {
-                frm.MdiParent = this;
-                frm.Show();
-            }
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
