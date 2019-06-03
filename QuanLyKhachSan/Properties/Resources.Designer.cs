@@ -163,6 +163,26 @@ namespace QuanLyKhachSan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icons8_Windows_8_Household_Bell_Service {
+            get {
+                object obj = ResourceManager.GetObject("Icons8-Windows-8-Household-Bell-Service", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icons8_Windows_8_Household_Bell_Service1 {
+            get {
+                object obj = ResourceManager.GetObject("Icons8-Windows-8-Household-Bell-Service1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_HDSDDV {
             get {
                 object obj = ResourceManager.GetObject("img_HDSDDV", resourceCulture);

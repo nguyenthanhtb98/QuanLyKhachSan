@@ -21,21 +21,6 @@ namespace QuanLyKhachSan.GUI
             dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
         }
 
-        private void btnThemTrangBi_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void btnXoaTrangBi_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnSuaTrangBi_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnTroVe_Click(object sender, EventArgs e)
         {
@@ -84,5 +69,7 @@ namespace QuanLyKhachSan.GUI
             dgvDanhSachTrangBi.DataSource = dal_TrangBi.ThongTinTrangBi();
             MessageBox.Show("Sửa trang bị thành công!");
         }
+
+
     }
 }

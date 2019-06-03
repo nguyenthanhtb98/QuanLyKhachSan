@@ -150,5 +150,21 @@ namespace QuanLyKhachSan.GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnLoaiDV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmLoaiDV frm = new frmLoaiDV();
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnDichVu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmDichVu frm = new frmDichVu();
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

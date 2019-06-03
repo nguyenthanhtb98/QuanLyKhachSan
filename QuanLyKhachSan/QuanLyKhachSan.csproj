@@ -71,6 +71,12 @@
     <Compile Include="GUI\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDichVu.Designer.cs">
+      <DependentUpon>frmDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     </Compile>
     <Compile Include="GUI\frmKhachHang.Designer.cs">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLoaiDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLoaiDV.Designer.cs">
+      <DependentUpon>frmLoaiDV.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmMenu2.cs">
       <SubType>Form</SubType>
@@ -154,6 +166,7 @@
     <Compile Include="Values Object\HoaDon.cs" />
     <Compile Include="Values Object\KhachHang.cs" />
     <Compile Include="Values Object\LoaiDichVu.cs" />
+    <Compile Include="Values Object\LoaiDV.cs" />
     <Compile Include="Values Object\LoaiPhong.cs" />
     <Compile Include="Values Object\PhieuThanhToan.cs" />
     <Compile Include="Values Object\PhieuThue.cs" />
@@ -165,11 +178,17 @@
     <EmbeddedResource Include="GUI\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDichVu.resx">
+      <DependentUpon>frmDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoaiDV.resx">
+      <DependentUpon>frmLoaiDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMenu2.resx">
       <DependentUpon>frmMenu2.cs</DependentUpon>
@@ -279,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img_HDSDDV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Household-Bell-Service1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

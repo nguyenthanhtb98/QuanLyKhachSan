@@ -19,13 +19,13 @@ namespace QuanLyKhachSan
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMenu2());
-            frmDangNhap frmDangNhap = new frmDangNhap();
             //frmMenu2 frmMenu2 = new frmMenu2();
-            Application.Run(frmDangNhap);
+            //Application.Run(frmDangNhap);
             //if( frmDangNhap.isLoggedIn == true)
             //{
             //    Application.Run(frmMenu2);
             //}
+            Application.Run(new frmDangNhap());
         }
     }
 }

@@ -31,8 +31,16 @@ namespace QuanLyKhachSan.Values_Object
             get { return _MaLDV; }
             set { _MaLDV = value; }
         }
-        
-        
-        
+
+        private int _GiaDV;
+
+        public int GiaDV
+        {
+            get { return _GiaDV; }
+            set { _GiaDV = value; }
+        }
+
+
+
     }
 }
