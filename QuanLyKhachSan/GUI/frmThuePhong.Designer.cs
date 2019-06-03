@@ -189,6 +189,7 @@
             this.cboHinhThucThue.Name = "cboHinhThucThue";
             this.cboHinhThucThue.Size = new System.Drawing.Size(261, 25);
             this.cboHinhThucThue.TabIndex = 60;
+            this.cboHinhThucThue.Text = "Theo Ngày";
             // 
             // label4
             // 

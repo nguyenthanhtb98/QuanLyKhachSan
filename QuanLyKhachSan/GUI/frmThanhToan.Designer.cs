@@ -100,13 +100,14 @@
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.BackColor = System.Drawing.Color.YellowGreen;
             this.btnXacNhan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.Location = new System.Drawing.Point(271, 344);
+            this.btnXacNhan.Location = new System.Drawing.Point(294, 341);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(94, 29);
+            this.btnXacNhan.Size = new System.Drawing.Size(98, 33);
             this.btnXacNhan.TabIndex = 59;
             this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // lblTenKH
@@ -300,7 +301,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(283, 321);
+            this.label6.Location = new System.Drawing.Point(318, 321);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 19);
             this.label6.TabIndex = 18;
@@ -311,7 +312,7 @@
             this.lblTienPhong.AutoSize = true;
             this.lblTienPhong.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTienPhong.ForeColor = System.Drawing.Color.Red;
-            this.lblTienPhong.Location = new System.Drawing.Point(188, 321);
+            this.lblTienPhong.Location = new System.Drawing.Point(213, 321);
             this.lblTienPhong.Name = "lblTienPhong";
             this.lblTienPhong.Size = new System.Drawing.Size(99, 19);
             this.lblTienPhong.TabIndex = 17;
@@ -322,7 +323,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(678, 321);
+            this.label5.Location = new System.Drawing.Point(681, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 19);
             this.label5.TabIndex = 16;

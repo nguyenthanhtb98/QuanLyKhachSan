@@ -21,11 +21,11 @@ namespace QuanLyKhachSan.DAL
             return conn.ThucHienLenh("Insert into TRANGBITHEOPHONG(MaTB, MaPhong, SoLuong) values('" + tb.MaTB + "','" + tb.MaPhong + "','" + tb.SoLuong + "')");
         }
 
-        public int SuaDichVuChoPhong(TrangBiTheoPhong tb)
+        public int SuaSoLuongTrangBiChoPhong(TrangBiTheoPhong tb)
         {
             return conn.ThucHienLenh("Update TRANGBITHEOPHONG set SoLuong = '" + tb.SoLuong + "' where MaPhong = '" + tb.MaPhong + "' and MaTB = '" + tb.MaTB + "'");
         }
-        public int XoaDichVuChoPhong(TrangBiTheoPhong tb)
+        public int XoaTrangBiChoPhong(TrangBiTheoPhong tb)
         {
             return conn.ThucHienLenh("Delete from TRANGBITHEOPHONG where MaPhong = '" + tb.MaPhong + "' and MaTB = '" + tb.MaTB + "'");
         }

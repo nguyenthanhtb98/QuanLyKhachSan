@@ -25,9 +25,21 @@ namespace QuanLyKhachSan.GUI
         private void frmPhong_Load(object sender, EventArgs e)
         {
             dgvPhong.DataSource = dal_phong.ThongTinCacPhong();
+            dgvPhong.Columns["GiaTheoGio"].DefaultCellStyle.Format = "#,#";
+            dgvPhong.Columns["GiaTheoNgay"].DefaultCellStyle.Format = "#,#";
             cboLoaiPhong.DataSource = dal_loaiphong.ThongTinCacLoaiPhong();
             cboLoaiPhong.DisplayMember = "TenLP";
             cboLoaiPhong.ValueMember = "MaLP";
+            if(dgvPhong.RowCount>0) //lấy thông tin dòng đầu
+            {
+                int index = dgvPhong.CurrentCell.RowIndex;
+                txtTenPhong.Text = dgvPhong.Rows[index].Cells[1].Value.ToString();
+                cboTrangThaiPhong.Text = dgvPhong.Rows[index].Cells[2].Value.ToString();
+                txtGiaTheoGio.Text = dgvPhong.Rows[index].Cells[3].Value.ToString();
+                txtGiaTheoNgay.Text = dgvPhong.Rows[index].Cells[4].Value.ToString();
+                cboLoaiPhong.Text = dgvPhong.Rows[index].Cells[5].Value.ToString();
+            }
+
         }
 
 

@@ -23,18 +23,25 @@ namespace QuanLyKhachSan.GUI
         public frmThanhToan()
         {
             InitializeComponent();
-            //Danh sách các khách hàng thuê phòng
+            //định dạng lại cột chứa ngày tháng, vì khi up từ csdl mặc định MM/dd/yyyy
+            dgvPhieuThanhToan.Columns["NgayDen"].DefaultCellStyle.Format = "dd/MM/yyyy hh:mm:ss tt";
+            dgvPhieuThanhToan.Columns["NgayDi"].DefaultCellStyle.Format = "dd/MM/yyyy hh:mm:ss tt";
+            //Lấy Danh sách các khách hàng thuê phòng
             dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
 
             //lấy dữ liệu của phiếu thuê đầu tiên
-            if(dgvPhieuThanhToan.RowCount>0)
+            if (dgvPhieuThanhToan.RowCount>0)
             {
                 string str_mapt = dgvPhieuThanhToan.Rows[0].Cells[0].Value.ToString().Trim();
                 lblTenKH.Text = dgvPhieuThanhToan.Rows[0].Cells[2].Value.ToString().Trim();
                 dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
+                dgvPhong.Columns["GiaTheoGio"].DefaultCellStyle.Format = "#,#";
+                dgvPhong.Columns["GiaTheoNgay"].DefaultCellStyle.Format = "#,#";
                 dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
-                lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
-                lblTienPhong.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+                dgvDichVuDaSuDung.Columns["GiaDV"].DefaultCellStyle.Format = "#,#";
+
+                lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
+                lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
             }
 
         }
@@ -53,8 +60,8 @@ namespace QuanLyKhachSan.GUI
             lblTenKH.Text = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
             dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
             dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
-            lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
-            lblTienPhong.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+            lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
+            lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -91,8 +98,8 @@ namespace QuanLyKhachSan.GUI
                     lblTenKH.Text = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
                     dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
                     dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
-                    lblTongTienDV.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
-                    lblTienPhong.Text = string.Format("{0:0,0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+                    lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
+                    lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
                 }
                 else // trường hợp không có gì
                 {
@@ -120,7 +127,8 @@ namespace QuanLyKhachSan.GUI
                 //cập nhật lại dgvPhieuthanhtoan
                 dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
                 //cập nhật lại tiền phòng
-                lblTienPhong.Text = dal_ThanhToan.TinhTienPhong(pt.MaPT).ToString();
+                lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(pt.MaPT));
+                //lblTienPhong.Text = dal_ThanhToan.TinhTienPhong(pt.MaPT).ToString();
                 MessageBox.Show("Cập nhật ngày đi cho khách hàng thành công!");
             }
         }
@@ -164,10 +172,10 @@ namespace QuanLyKhachSan.GUI
                 e.Graphics.DrawString("Email: " + str_Email, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 3 * d));
                 e.Graphics.DrawString("Số CMND: " + str_CMND, new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 4 * d));
                 e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 5 * d));
-                e.Graphics.DrawString("Tiền phòng:   " + string.Format("{0:0,0}", int_TienPhong) + " đồng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 6 * d));
-                e.Graphics.DrawString("Tiền dịch vụ: " + string.Format("{0:0,0}", int_TienDV) + " đồng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 7 * d));
+                e.Graphics.DrawString("Tiền phòng:   " + string.Format("{0:n0}", int_TienPhong) + " đồng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 6 * d));
+                e.Graphics.DrawString("Tiền dịch vụ: " + string.Format("{0:n0}", int_TienDV) + " đồng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 7 * d));
                 e.Graphics.DrawString("------------------------------------------------------", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 8 * d));
-                e.Graphics.DrawString("Tổng tiền:    " + string.Format("{0:0,0}", int_TongTienTT) + " đồng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 9 * d));
+                e.Graphics.DrawString("Tổng tiền:    " + string.Format("{0:n0}", int_TongTienTT) + " đồng", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 9 * d));
                 e.Graphics.DrawString("Ngày thanh toán:   " + DateTime.Now.ToString(), new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(x, y + 12 * d));
             }
 

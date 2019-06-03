@@ -24,6 +24,7 @@ namespace QuanLyKhachSan.GUI
 
         private void frmDichVu_Load(object sender, EventArgs e)
         {
+            dgvDV.Columns["GiaDV"].DefaultCellStyle.Format = "#,#";
             //lấy tên các dịch vụ vào combo box
             cboLoaiDV.DataSource = dal_LoaiDV.ThongTinCacLoaiDichVu();
             cboLoaiDV.DisplayMember = "TenLDV";

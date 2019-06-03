@@ -56,41 +56,87 @@ namespace QuanLyKhachSan.GUI
 
         private void dgvDanhSachTrangBi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = dgvDanhSachTrangBi.CurrentCell.RowIndex;
-            TrangBiTheoPhong tb = new TrangBiTheoPhong();
-            tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
-            tb.MaTB = dgvDanhSachTrangBi.Rows[i].Cells[1].Value.ToString().Trim();
-            dal_TrangBiTheoPhong.XoaDichVuChoPhong(tb);
 
-            //cập nhật lại bảng danh sách
-            dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            TrangBiTheoPhong tb = new TrangBiTheoPhong();
-            tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
-            tb.MaTB = cboTenTrangBi.SelectedValue.ToString().Trim();
-            tb.SoLuong = Convert.ToInt32(txtSoLuongTB.Text);
-            //tạo 1 biến kết quả kiểm tra có thêm được trang bị cho phòng hay không, nếu trả về 0 nghĩa là đã tồn tại, cần tiến hành sửa thay vì thêm
-            int ketqua = dal_TrangBiTheoPhong.ThemTrangBiChoPhong(tb);
-            if (ketqua == 1) MessageBox.Show("Thêm Trang Bị Thành Công!");
-            if (ketqua == 0)
-            {
-                dal_TrangBiTheoPhong.SuaDichVuChoPhong(tb);
-                MessageBox.Show("Sửa Số Lượng Trang Bị Thành Công!");
-            }
-            //cập nhật lại bảng danh sách trang bị
-            dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
-        }
-
-        private void btnTroVe_Click_1(object sender, EventArgs e)
+        private void btnTroVe_Click_2(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (dgvDanhSachTrangBi.RowCount > 0)
+            {
+                int i = dgvDanhSachTrangBi.CurrentCell.RowIndex;
+                TrangBiTheoPhong tb = new TrangBiTheoPhong();
+                tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
+                tb.MaTB = dgvDanhSachTrangBi.Rows[i].Cells["MaTB"].Value.ToString().Trim();
+                //lưu tên trang bị xóa
+                string strTenTB = dgvDanhSachTrangBi.Rows[i].Cells["TenTB"].Value.ToString().Trim();
+                dal_TrangBiTheoPhong.XoaTrangBiChoPhong(tb);
+
+                //cập nhật lại bảng danh sách
+
+                dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
+                MessageBox.Show("Xóa trang bị "+strTenTB+" của phòng thành công!");
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            TrangBiTheoPhong tb = new TrangBiTheoPhong();
+            tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
+            tb.MaTB = cboTenTrangBi.SelectedValue.ToString().Trim();
+            try
+            {
+                tb.SoLuong = Convert.ToInt32(txtSoLuongTB.Text);
+            }
+            catch (Exception)
+            {
+
+                tb.SoLuong = 1;
+            }
+            int ketqua = dal_TrangBiTheoPhong.ThemTrangBiChoPhong(tb);
+            if (ketqua == 1)
+            {
+                dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
+                MessageBox.Show("Thêm trang bị thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm trang bị thất bại! Trang bị này đã tồn tại");
+            }
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if(dgvDanhSachTrangBi.RowCount>0)
+            {
+                TrangBiTheoPhong tb = new TrangBiTheoPhong();
+                tb.MaPhong = cboTenPhong.SelectedValue.ToString().Trim();
+                tb.MaTB = cboTenTrangBi.SelectedValue.ToString().Trim();
+                try
+                {
+                    tb.SoLuong = Convert.ToInt32(txtSoLuongTB.Text);
+                }
+                catch (Exception)
+                {
+                    tb.SoLuong = 0;
+                }
+                int ketqua = dal_TrangBiTheoPhong.SuaSoLuongTrangBiChoPhong(tb);
+                if (ketqua == 1)
+                {
+                    dgvDanhSachTrangBi.DataSource = dal_TrangBiTheoPhong.ThongTinCacTrangBiTheoMaPhong(cboTenPhong.SelectedValue.ToString().Trim());
+                    MessageBox.Show("Sửa số lượng trang bị thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Sửa số lượng trang bị thất bại! ");
+                }
+            }
+
 
         }
     }

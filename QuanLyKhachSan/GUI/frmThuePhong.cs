@@ -26,6 +26,8 @@ namespace QuanLyKhachSan.GUI
         private void ThuePhong_Load(object sender, EventArgs e)
         {
             dgvThuePhong.DataSource = dal_phong.ThongTinCacPhongConTrong();
+            dgvThuePhong.Columns["GiaTheoGio"].DefaultCellStyle.Format = "#,#";
+            dgvThuePhong.Columns["GiaTheoNgay"].DefaultCellStyle.Format = "#,#";
         }
 
 

@@ -30,8 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuDungDichVu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlDichVu = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,12 +40,12 @@
             this.TenDV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XoaDV = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTenDV = new System.Windows.Forms.DataGridView();
-            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboLoaiDV = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.MaPT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,8 +58,9 @@
             this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhThucThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
-            this.XoaDV = new System.Windows.Forms.DataGridViewImageColumn();
+            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaSuDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTenDV)).BeginInit();
@@ -168,6 +169,16 @@
             this.SoLuong.ReadOnly = true;
             this.SoLuong.Width = 87;
             // 
+            // XoaDV
+            // 
+            this.XoaDV.FillWeight = 68.41196F;
+            this.XoaDV.HeaderText = "Xóa";
+            this.XoaDV.Image = global::QuanLyKhachSan.Properties.Resources.remove;
+            this.XoaDV.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.XoaDV.Name = "XoaDV";
+            this.XoaDV.ReadOnly = true;
+            this.XoaDV.Width = 32;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -189,7 +200,8 @@
             this.dgvTenDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTenDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDV,
-            this.TenDV1});
+            this.TenDV1,
+            this.GiaDV});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,25 +215,9 @@
             this.dgvTenDV.ReadOnly = true;
             this.dgvTenDV.RowHeadersVisible = false;
             this.dgvTenDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTenDV.Size = new System.Drawing.Size(303, 296);
+            this.dgvTenDV.Size = new System.Drawing.Size(314, 296);
             this.dgvTenDV.TabIndex = 2;
             this.dgvTenDV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenDV_CellDoubleClick);
-            // 
-            // MaDV
-            // 
-            this.MaDV.DataPropertyName = "MaDV";
-            this.MaDV.FillWeight = 109.4591F;
-            this.MaDV.HeaderText = "Mã dịch vụ";
-            this.MaDV.Name = "MaDV";
-            this.MaDV.ReadOnly = true;
-            // 
-            // TenDV1
-            // 
-            this.TenDV1.DataPropertyName = "TenDV";
-            this.TenDV1.FillWeight = 160.084F;
-            this.TenDV1.HeaderText = "Tên Dịch Vụ";
-            this.TenDV1.Name = "TenDV1";
-            this.TenDV1.ReadOnly = true;
             // 
             // cboLoaiDV
             // 
@@ -245,6 +241,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(357, 544);
             this.panel3.TabIndex = 43;
+            // 
+            // btnTroVe
+            // 
+            this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTroVe.Appearance.Options.UseFont = true;
+            this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
+            this.btnTroVe.Location = new System.Drawing.Point(244, 22);
+            this.btnTroVe.Name = "btnTroVe";
+            this.btnTroVe.Size = new System.Drawing.Size(101, 38);
+            this.btnTroVe.TabIndex = 28;
+            this.btnTroVe.Text = "Trở về";
+            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
             // 
             // dgvKhachHang
             // 
@@ -369,27 +377,28 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 32;
             // 
-            // btnTroVe
+            // MaDV
             // 
-            this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTroVe.Appearance.Options.UseFont = true;
-            this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
-            this.btnTroVe.Location = new System.Drawing.Point(244, 22);
-            this.btnTroVe.Name = "btnTroVe";
-            this.btnTroVe.Size = new System.Drawing.Size(101, 38);
-            this.btnTroVe.TabIndex = 28;
-            this.btnTroVe.Text = "Trở về";
-            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
+            this.MaDV.DataPropertyName = "MaDV";
+            this.MaDV.FillWeight = 109.4591F;
+            this.MaDV.HeaderText = "Mã dịch vụ";
+            this.MaDV.Name = "MaDV";
+            this.MaDV.ReadOnly = true;
             // 
-            // XoaDV
+            // TenDV1
             // 
-            this.XoaDV.FillWeight = 68.41196F;
-            this.XoaDV.HeaderText = "Xóa";
-            this.XoaDV.Image = global::QuanLyKhachSan.Properties.Resources.remove;
-            this.XoaDV.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.XoaDV.Name = "XoaDV";
-            this.XoaDV.ReadOnly = true;
-            this.XoaDV.Width = 32;
+            this.TenDV1.DataPropertyName = "TenDV";
+            this.TenDV1.FillWeight = 160.084F;
+            this.TenDV1.HeaderText = "Tên Dịch Vụ";
+            this.TenDV1.Name = "TenDV1";
+            this.TenDV1.ReadOnly = true;
+            // 
+            // GiaDV
+            // 
+            this.GiaDV.DataPropertyName = "GiaDV";
+            this.GiaDV.HeaderText = "Giá Dịch Vụ";
+            this.GiaDV.Name = "GiaDV";
+            this.GiaDV.ReadOnly = true;
             // 
             // frmSuDungDichVu
             // 
@@ -421,8 +430,6 @@
         private System.Windows.Forms.ComboBox cboLoaiDV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvDichVuDaSuDung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDDV_MaDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDV2;
@@ -442,5 +449,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhThucThue;
         private DevExpress.XtraEditors.SimpleButton btnTroVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaDV;
     }
 }

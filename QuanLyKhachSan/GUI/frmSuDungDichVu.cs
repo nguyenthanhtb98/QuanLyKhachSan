@@ -24,6 +24,7 @@ namespace QuanLyKhachSan.GUI
         {          
             InitializeComponent();
             dgvKhachHang.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
+
         }
 
         private void SuDungDichVu_Load(object sender, EventArgs e)
@@ -34,12 +35,15 @@ namespace QuanLyKhachSan.GUI
                 string str_mapt = dgvKhachHang.Rows[i].Cells["MaPT"].Value.ToString().Trim();
 
                 dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt);
+                dgvDichVuDaSuDung.Columns["Gia"].DefaultCellStyle.Format = "#,#";
+                
             }
             //lấy tên các dịch vụ vào combo box
             cboLoaiDV.DataSource = dal_LoaiDV.ThongTinCacLoaiDichVu();
             cboLoaiDV.DisplayMember = "TenLDV";
             cboLoaiDV.ValueMember = "MaLDV";
             dgvTenDV.DataSource = dal_DichVu.ThongTinCacDichVuTheoMaLoaiDichVu(cboLoaiDV.SelectedValue.ToString().Trim());
+            dgvTenDV.Columns["GiaDV"].DefaultCellStyle.Format = "#,#";
         }
 
         private void cboLoaiDV_SelectedIndexChanged(object sender, EventArgs e)
