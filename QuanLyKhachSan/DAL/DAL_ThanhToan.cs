@@ -23,7 +23,7 @@ namespace QuanLyKhachSan.DAL
 
         public int ThemPhieuThanhToan(PhieuThanhToan ptt)
         {
-            return conn.ThucHienLenh("ThemPhieuThanhToan '" + ptt.TongTienTT + "','" + ptt.NgayTT + "','" + ptt.MaPT + "'");
+            return conn.ThucHienLenh("ThemPhieuThanhToan N'" + ptt.TenKH + "',N'" + ptt.GioiTinh + "','" + ptt.SDT + "','"+ptt.NgayTT+"','"+ptt.TongTienTT+"'");
         }
         /// <summary>
         /// Hàm lấy tổng tiền dịch vụ theo mã phiếu thuê

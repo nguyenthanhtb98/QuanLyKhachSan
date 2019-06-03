@@ -59,7 +59,10 @@ namespace QuanLyKhachSan.GUI
             //lấy thông tin của khách hàng thuê phòng cho vào form hóa đơn
             int i = dgvPhieuThanhToan.CurrentCell.RowIndex; //lấy chỉ số hàng
             string str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim(); //lấy mã phiếu thuê
+            //tạo đối tượng hóa đơn lưu thông tin truyền qua form hóa đơn
             HoaDon hd = new HoaDon();
+            hd.MaPT = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
+            hd.MaKH = dgvPhieuThanhToan.Rows[i].Cells[1].Value.ToString().Trim();
             hd.TenKH = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
             hd.GioiTinh = dgvPhieuThanhToan.Rows[i].Cells[3].Value.ToString().Trim();
             hd.SDT = dgvPhieuThanhToan.Rows[i].Cells[4].Value.ToString().Trim();
@@ -70,8 +73,7 @@ namespace QuanLyKhachSan.GUI
             hd.TongTienTT = hd.TienPhong + hd.TienDV;
 
             frmHoaDon frm = new frmHoaDon();
-            frm.ThongTinHoaDon(hd);
-            frm.LayMaPT(str_mapt);
+            frm.LayDuLieuTuFormThanhToanVaoFormHoaDon(hd);
             frm.ShowDialog();
          
             //cập nhật lại thông tin danh sách người đang thuê phòng và các thông tin phòng dịch vụ

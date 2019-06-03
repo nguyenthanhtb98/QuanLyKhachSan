@@ -52,7 +52,11 @@ namespace QuanLyKhachSan.GUI
                 //Thêm khách hàng mới
                 KhachHang kh = new KhachHang();
                 kh.TenKH = txtTenKH.Text;
-                kh.GioiTinh = cboGioiTinh.Text;
+                if (rdiNam.Checked == true)
+                {
+                    kh.GioiTinh = "Nam";
+                }
+                else kh.GioiTinh = "Nữ";
                 kh.SDT = txtSDT.Text;
                 kh.Email = txtEmail.Text;
                 kh.CMND = txtCMND.Text;

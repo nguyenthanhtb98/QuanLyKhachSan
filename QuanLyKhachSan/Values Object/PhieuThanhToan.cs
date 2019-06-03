@@ -8,20 +8,68 @@ namespace QuanLyKhachSan.Values_Object
 {
     class PhieuThanhToan
     {
-        private string _MaPTT;
+        private string _TenKH;
 
-        public string MaPTT
+        public string TenKH
         {
-            get { return _MaPTT; }
-            set { _MaPTT = value; }
+            get { return _TenKH; }
+            set { _TenKH = value; }
         }
 
-        private string _MaPT;
+        private string _GioiTinh;
 
-        public string MaPT
+        public string GioiTinh
         {
-            get { return _MaPT; }
-            set { _MaPT = value; }
+            get { return _GioiTinh; }
+            set { _GioiTinh = value; }
+        }
+
+        //private string _CMND;
+
+        //public string CMND
+        //{
+        //    get { return _CMND; }
+        //    set { _CMND = value; }
+        //}
+
+        private string _SDT;
+
+        public string SDT
+        {
+            get { return _SDT; }
+            set { _SDT = value; }
+        }
+
+        //private string _Email;
+
+        //public string Email
+        //{
+        //    get { return _Email; }
+        //    set { _Email = value; }
+        //}
+
+        //private int _TienPhong;
+
+        //public int TienPhong
+        //{
+        //    get { return _TienPhong; }
+        //    set { _TienPhong = value; }
+        //}
+
+        //private int _TienDV;
+
+        //public int TienDV
+        //{
+        //    get { return _TienDV; }
+        //    set { _TienDV = value; }
+        //}
+
+        private DateTime _NgayTT;
+
+        public DateTime NgayTT
+        {
+            get { return _NgayTT; }
+            set { _NgayTT = value; }
         }
 
         private int _TongTienTT;
@@ -32,15 +80,6 @@ namespace QuanLyKhachSan.Values_Object
             set { _TongTienTT = value; }
         }
 
-        private DateTime _NgayTT;
 
-        public DateTime NgayTT
-        {
-            get { return _NgayTT; }
-            set { _NgayTT = value; }
-        }
-        
-        
-        
     }
 }

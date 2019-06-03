@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangBiTheoPhong));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvDanhSachTrangBi = new System.Windows.Forms.DataGridView();
+            this.MaTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XoaTB = new System.Windows.Forms.DataGridViewImageColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.cboTenPhong = new System.Windows.Forms.ComboBox();
             this.txtSoLuongTB = new System.Windows.Forms.TextBox();
@@ -39,13 +43,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboTenTrangBi = new System.Windows.Forms.ComboBox();
             this.pnlThemTrangBiTheoPhong = new System.Windows.Forms.Panel();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
-            this.MaTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XoaTB = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachTrangBi)).BeginInit();
             this.pnlThemTrangBiTheoPhong.SuspendLayout();
@@ -67,6 +67,8 @@
             this.dgvDanhSachTrangBi.AllowUserToAddRows = false;
             this.dgvDanhSachTrangBi.AllowUserToResizeColumns = false;
             this.dgvDanhSachTrangBi.AllowUserToResizeRows = false;
+            this.dgvDanhSachTrangBi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDanhSachTrangBi.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvDanhSachTrangBi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachTrangBi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -91,6 +93,43 @@
             this.dgvDanhSachTrangBi.TabIndex = 6;
             this.dgvDanhSachTrangBi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTrangBi_CellClick);
             this.dgvDanhSachTrangBi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTrangBi_CellContentClick);
+            // 
+            // MaTB
+            // 
+            this.MaTB.DataPropertyName = "MaTB";
+            this.MaTB.FillWeight = 94.52784F;
+            this.MaTB.HeaderText = "Mã Trang Bị";
+            this.MaTB.Name = "MaTB";
+            this.MaTB.ReadOnly = true;
+            this.MaTB.Visible = false;
+            // 
+            // TenTB
+            // 
+            this.TenTB.DataPropertyName = "TenTB";
+            this.TenTB.FillWeight = 206.8617F;
+            this.TenTB.HeaderText = "Tên Trang Bị";
+            this.TenTB.Name = "TenTB";
+            this.TenTB.ReadOnly = true;
+            this.TenTB.Width = 395;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.FillWeight = 72.24995F;
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 136;
+            // 
+            // XoaTB
+            // 
+            this.XoaTB.FillWeight = 26.36055F;
+            this.XoaTB.HeaderText = "Xóa";
+            this.XoaTB.Image = global::QuanLyKhachSan.Properties.Resources.remove;
+            this.XoaTB.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.XoaTB.Name = "XoaTB";
+            this.XoaTB.ReadOnly = true;
+            this.XoaTB.Width = 40;
             // 
             // label4
             // 
@@ -171,20 +210,11 @@
             this.pnlThemTrangBiTheoPhong.Size = new System.Drawing.Size(296, 410);
             this.pnlThemTrangBiTheoPhong.TabIndex = 0;
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.FillWeight = 23.2593F;
-            this.dataGridViewImageColumn1.HeaderText = "Xóa";
-            this.dataGridViewImageColumn1.Image = global::QuanLyKhachSan.Properties.Resources.remove;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 36;
-            // 
             // btnTroVe
             // 
             this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.Appearance.Options.UseFont = true;
-            this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
             this.btnTroVe.Location = new System.Drawing.Point(169, 193);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(101, 38);
@@ -196,7 +226,7 @@
             // 
             this.btnOk.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Appearance.Options.UseFont = true;
-            this.btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.ImageOptions.Image")));
             this.btnOk.Location = new System.Drawing.Point(46, 193);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(101, 38);
@@ -204,42 +234,14 @@
             this.btnOk.Text = "OK";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // MaTB
+            // dataGridViewImageColumn1
             // 
-            this.MaTB.DataPropertyName = "MaTB";
-            this.MaTB.FillWeight = 94.52784F;
-            this.MaTB.HeaderText = "Mã Trang Bị";
-            this.MaTB.Name = "MaTB";
-            this.MaTB.ReadOnly = true;
-            this.MaTB.Visible = false;
-            // 
-            // TenTB
-            // 
-            this.TenTB.DataPropertyName = "TenTB";
-            this.TenTB.FillWeight = 206.8617F;
-            this.TenTB.HeaderText = "Tên Trang Bị";
-            this.TenTB.Name = "TenTB";
-            this.TenTB.ReadOnly = true;
-            this.TenTB.Width = 395;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.FillWeight = 72.24995F;
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 136;
-            // 
-            // XoaTB
-            // 
-            this.XoaTB.FillWeight = 26.36055F;
-            this.XoaTB.HeaderText = "Xóa";
-            this.XoaTB.Image = global::QuanLyKhachSan.Properties.Resources.remove;
-            this.XoaTB.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.XoaTB.Name = "XoaTB";
-            this.XoaTB.ReadOnly = true;
-            this.XoaTB.Width = 40;
+            this.dataGridViewImageColumn1.FillWeight = 23.2593F;
+            this.dataGridViewImageColumn1.HeaderText = "Xóa";
+            this.dataGridViewImageColumn1.Image = global::QuanLyKhachSan.Properties.Resources.remove;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 36;
             // 
             // frmTrangBiTheoPhong
             // 

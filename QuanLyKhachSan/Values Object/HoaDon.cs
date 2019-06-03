@@ -8,6 +8,14 @@ namespace QuanLyKhachSan.Values_Object
 {
     public class HoaDon
     {
+        private string _MaKH;
+
+        public string MaKH
+        {
+            get { return _MaKH; }
+            set { _MaKH = value; }
+        }
+
         private string _TenKH;
 
         public string TenKH
@@ -79,8 +87,16 @@ namespace QuanLyKhachSan.Values_Object
             get { return _TongTienTT; }
             set { _TongTienTT = value; }
         }
-        
-        
-        
+
+        private string  _MaPT;
+
+        public string  MaPT
+        {
+            get { return _MaPT; }
+            set { _MaPT = value; }
+        }
+
+
+
     }
 }

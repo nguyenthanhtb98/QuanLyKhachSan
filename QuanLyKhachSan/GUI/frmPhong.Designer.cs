@@ -63,6 +63,9 @@
             this.dgvPhong.AllowUserToAddRows = false;
             this.dgvPhong.AllowUserToResizeColumns = false;
             this.dgvPhong.AllowUserToResizeRows = false;
+            this.dgvPhong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhong.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -80,12 +83,12 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPhong.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPhong.Location = new System.Drawing.Point(16, 37);
+            this.dgvPhong.Location = new System.Drawing.Point(24, 37);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.ReadOnly = true;
             this.dgvPhong.RowHeadersVisible = false;
             this.dgvPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhong.Size = new System.Drawing.Size(626, 372);
+            this.dgvPhong.Size = new System.Drawing.Size(624, 393);
             this.dgvPhong.TabIndex = 0;
             this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             // 
@@ -95,7 +98,6 @@
             this.MaPhong.HeaderText = "Mã Phòng";
             this.MaPhong.Name = "MaPhong";
             this.MaPhong.ReadOnly = true;
-            this.MaPhong.Width = 97;
             // 
             // TenPhong
             // 
@@ -103,7 +105,6 @@
             this.TenPhong.HeaderText = "Tên Phòng";
             this.TenPhong.Name = "TenPhong";
             this.TenPhong.ReadOnly = true;
-            this.TenPhong.Width = 97;
             // 
             // TrangThai
             // 
@@ -111,7 +112,6 @@
             this.TrangThai.HeaderText = "Trạng Thái";
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
-            this.TrangThai.Width = 97;
             // 
             // GiaTheoGio
             // 
@@ -119,7 +119,6 @@
             this.GiaTheoGio.HeaderText = "Giá Theo Giờ";
             this.GiaTheoGio.Name = "GiaTheoGio";
             this.GiaTheoGio.ReadOnly = true;
-            this.GiaTheoGio.Width = 96;
             // 
             // GiaTheoNgay
             // 
@@ -127,7 +126,6 @@
             this.GiaTheoNgay.HeaderText = "Giá Theo Ngày";
             this.GiaTheoNgay.Name = "GiaTheoNgay";
             this.GiaTheoNgay.ReadOnly = true;
-            this.GiaTheoNgay.Width = 97;
             // 
             // TenLoaiPhong
             // 
@@ -135,7 +133,6 @@
             this.TenLoaiPhong.HeaderText = "Loại Phòng";
             this.TenLoaiPhong.Name = "TenLoaiPhong";
             this.TenLoaiPhong.ReadOnly = true;
-            this.TenLoaiPhong.Width = 97;
             // 
             // txtTenPhong
             // 

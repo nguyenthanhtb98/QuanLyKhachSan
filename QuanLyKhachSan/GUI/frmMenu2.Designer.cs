@@ -59,6 +59,7 @@
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnKhachHang = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -93,9 +94,10 @@
             this.btnPhong,
             this.btnTaiKhoan,
             this.btnTrangBi,
-            this.btnTrangBiTheoPhong});
+            this.btnTrangBiTheoPhong,
+            this.btnKhachHang});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 19;
+            this.ribbon.MaxItemId = 20;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -234,7 +236,7 @@
             // 
             this.btnTaiKhoan.Caption = "Tài khoản";
             this.btnTaiKhoan.Id = 16;
-            this.btnTaiKhoan.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.iconfinder_user_male_3699;
+            this.btnTaiKhoan.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.user_administrator_red_01;
             this.btnTaiKhoan.LargeWidth = 90;
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
@@ -294,6 +296,7 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnPhong);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnKhachHang);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTaiKhoan);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBi);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBiTheoPhong);
@@ -332,6 +335,17 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.btnSDDV);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Chức năng";
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.Caption = "Khách hàng";
+            this.btnKhachHang.Id = 19;
+            this.btnKhachHang.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.iconfinder_user_male_3699;
+            this.btnKhachHang.LargeWidth = 90;
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhachHang_ItemClick);
             // 
             // frmMenu2
             // 
@@ -385,5 +399,6 @@
         private DevExpress.XtraBars.BarButtonItem btnTrangBiTheoPhong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.BarButtonItem btnKhachHang;
     }
 }

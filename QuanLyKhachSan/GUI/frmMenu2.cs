@@ -124,5 +124,15 @@ namespace QuanLyKhachSan.GUI
         {
 
         }
+
+        private void btnKhachHang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
+            if (FormConChuaMo(frm))
+            {
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }
