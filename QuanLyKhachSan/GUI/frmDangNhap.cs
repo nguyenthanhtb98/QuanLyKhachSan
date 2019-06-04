@@ -39,7 +39,7 @@ namespace QuanLyKhachSan
 
                     //truyền thông tin tài khoản về form menu
                     this.Hide();
-                    frmMenu2 frm = new frmMenu2();
+                    frmMenu frm = new frmMenu();
                     frm.LayThongTinTaiKhoan(taikhoan);
                     frm.ShowDialog();
                     this.Close();

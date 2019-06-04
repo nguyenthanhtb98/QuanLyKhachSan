@@ -20,22 +20,25 @@ namespace QuanLyKhachSan.GUI
 
         }
 
-        public void InTaiLieu()
-        {
-            ReportDoanhThu report = new ReportDoanhThu();
-
-            documentViewer1.DocumentSource = report;
-            report.CreateDocument();
-        }
 
         private void frmPrint_Load(object sender, EventArgs e)
         {
 
         }
 
-        public void InDSKHDaThanhToan()
+        public void ThongKeDoanhThu()
         {
             ReportDoanhThu report = new ReportDoanhThu();
+            foreach (var item in report.Parameters)
+            {
+                item.Visible = false;
+            }
+            documentViewer1.DocumentSource = report;
+            report.CreateDocument();
+        }
+        public void ThongKePhong()
+        {
+            ReportPhong report = new ReportPhong();
             foreach (var item in report.Parameters)
             {
                 item.Visible = false;

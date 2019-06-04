@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan.GUI
 {
-    partial class frmMenu2
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -60,6 +60,7 @@
             this.btnDichVu = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiDV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSKHDaThanhToan = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThongKePhong = new DevExpress.XtraBars.BarButtonItem();
             this.rbbHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -119,9 +120,10 @@
             this.barButtonItem10,
             this.btnDichVu,
             this.btnLoaiDV,
-            this.btnDSKHDaThanhToan});
+            this.btnDSKHDaThanhToan,
+            this.btnThongKePhong});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 29;
+            this.ribbon.MaxItemId = 30;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbbHeThong,
@@ -130,7 +132,7 @@
             this.rbbTroGiup});
             this.ribbon.QuickToolbarItemLinks.Add(this.txtTenTaiKhoan);
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbon.Size = new System.Drawing.Size(852, 147);
+            this.ribbon.Size = new System.Drawing.Size(852, 166);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonItem1
@@ -369,19 +371,32 @@
             // 
             // btnDSKHDaThanhToan
             // 
+            this.btnDSKHDaThanhToan.Caption = "Doanh thu";
             this.btnDSKHDaThanhToan.Id = 28;
-            this.btnDSKHDaThanhToan.ImageOptions.Image = global::QuanLyKhachSan.Properties.Resources.Webalys_Kameleon_pics_Checklist;
-            this.btnDSKHDaThanhToan.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.Webalys_Kameleon_pics_Checklist;
+            this.btnDSKHDaThanhToan.ImageOptions.Image = global::QuanLyKhachSan.Properties.Resources.Custom_Icon_Design_Flatastic_5_Sales_report;
+            this.btnDSKHDaThanhToan.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.Custom_Icon_Design_Flatastic_5_Sales_report;
             this.btnDSKHDaThanhToan.LargeWidth = 90;
             this.btnDSKHDaThanhToan.Name = "btnDSKHDaThanhToan";
             this.btnDSKHDaThanhToan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnDSKHDaThanhToan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDSKHDaThanhToan_ItemClick);
+            // 
+            // btnThongKePhong
+            // 
+            this.btnThongKePhong.Caption = "Phòng";
+            this.btnThongKePhong.Id = 29;
+            this.btnThongKePhong.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.iconfinder_go_home_118770;
+            this.btnThongKePhong.LargeWidth = 90;
+            this.btnThongKePhong.Name = "btnThongKePhong";
+            this.btnThongKePhong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnThongKePhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongKePhong_ItemClick);
             // 
             // rbbHeThong
             // 
             this.rbbHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup3});
+            this.rbbHeThong.Image = ((System.Drawing.Image)(resources.GetObject("rbbHeThong.Image")));
             this.rbbHeThong.Name = "rbbHeThong";
             this.rbbHeThong.Text = "Hệ thống";
             // 
@@ -405,6 +420,7 @@
             this.rbbQuanLy.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
             this.ribbonPageGroup6});
+            this.rbbQuanLy.Image = ((System.Drawing.Image)(resources.GetObject("rbbQuanLy.Image")));
             this.rbbQuanLy.Name = "rbbQuanLy";
             this.rbbQuanLy.Text = "Quản lý";
             // 
@@ -429,12 +445,14 @@
             // 
             this.rbbThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rbbTK});
+            this.rbbThongKe.Image = ((System.Drawing.Image)(resources.GetObject("rbbThongKe.Image")));
             this.rbbThongKe.Name = "rbbThongKe";
             this.rbbThongKe.Text = "Thống kê";
             // 
             // rbbTK
             // 
             this.rbbTK.ItemLinks.Add(this.btnDSKHDaThanhToan);
+            this.rbbTK.ItemLinks.Add(this.btnThongKePhong);
             this.rbbTK.Name = "rbbTK";
             this.rbbTK.Text = "Thống kê";
             // 
@@ -442,6 +460,7 @@
             // 
             this.rbbTroGiup.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup7});
+            this.rbbTroGiup.Image = ((System.Drawing.Image)(resources.GetObject("rbbTroGiup.Image")));
             this.rbbTroGiup.Name = "rbbTroGiup";
             this.rbbTroGiup.Text = "Trợ giúp";
             // 
@@ -484,7 +503,7 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             // 
-            // frmMenu2
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -492,7 +511,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
-            this.Name = "frmMenu2";
+            this.Name = "frmMenu";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "QUẢN LÝ KHÁCH SẠN";
@@ -552,5 +571,6 @@
         private DevExpress.XtraBars.BarButtonItem btnDSKHDaThanhToan;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbbThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbbTK;
+        private DevExpress.XtraBars.BarButtonItem btnThongKePhong;
     }
 }

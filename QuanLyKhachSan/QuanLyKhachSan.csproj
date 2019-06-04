@@ -37,6 +37,9 @@
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -123,11 +126,11 @@
     <Compile Include="GUI\frmLoaiDV.Designer.cs">
       <DependentUpon>frmLoaiDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmMenu2.cs">
+    <Compile Include="GUI\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmMenu2.Designer.cs">
-      <DependentUpon>frmMenu2.cs</DependentUpon>
+    <Compile Include="GUI\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmPhong.cs">
       <SubType>Form</SubType>
@@ -202,6 +205,12 @@
     <Compile Include="ReportFile\ReportDoanhThu.Designer.cs">
       <DependentUpon>ReportDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportFile\ReportPhong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFile\ReportPhong.Designer.cs">
+      <DependentUpon>ReportPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Values Object\DichVu.cs" />
     <Compile Include="Values Object\HoaDon.cs" />
     <Compile Include="Values Object\KhachHang.cs" />
@@ -230,8 +239,8 @@
     <EmbeddedResource Include="GUI\frmLoaiDV.resx">
       <DependentUpon>frmLoaiDV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmMenu2.resx">
-      <DependentUpon>frmMenu2.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
@@ -271,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFile\ReportDoanhThu.resx">
       <DependentUpon>ReportDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFile\ReportPhong.resx">
+      <DependentUpon>ReportPhong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -350,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Webalys-Kameleon.pics-Checklist.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-5-Sales-report.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

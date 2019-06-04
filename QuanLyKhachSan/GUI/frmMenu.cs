@@ -12,10 +12,10 @@ using QuanLyKhachSan.Values_Object;
 
 namespace QuanLyKhachSan.GUI
 {
-    public partial class frmMenu2 : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private TaiKhoan TK = new TaiKhoan();
-        public frmMenu2()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -170,8 +170,15 @@ namespace QuanLyKhachSan.GUI
         private void btnDSKHDaThanhToan_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmPrint frm = new frmPrint();
-            frm.InDSKHDaThanhToan();
+            frm.ThongKeDoanhThu();
             frm.ShowDialog();   
+        }
+
+        private void btnThongKePhong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPrint frm = new frmPrint();
+            frm.ThongKePhong();
+            frm.ShowDialog();
         }
     }
 }
