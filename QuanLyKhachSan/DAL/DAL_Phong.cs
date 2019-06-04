@@ -13,7 +13,7 @@ namespace QuanLyKhachSan.DAL
         private KetNoiCSDL conn = new KetNoiCSDL();
         public DataTable ThongTinCacPhong()
         {
-            return conn.GetDataTable("select PHONG.MaPhong,TenPhong,TrangThai,GiaTheoGio, GiaTheoNgay,TenLP from PHONG,LOAIPHONG where PHONG.MaLP=LOAIPHONG.MaLP order by PHONG.MaPhong");
+            return conn.GetDataTable("select PHONG.MaPhong,TenPhong,TrangThai,GiaTheoGio, GiaTheoNgay,TenLP, MaPT from PHONG,LOAIPHONG where PHONG.MaLP=LOAIPHONG.MaLP order by PHONG.MaPhong");
         }
         public DataTable ThongTinCacPhongConTrong()
         {
@@ -47,6 +47,15 @@ namespace QuanLyKhachSan.DAL
         public int XoaPhong(Phong p)
         {
             return conn.ThucHienLenh("Delete from PHONG where MaPhong = '"+p.MaPhong+"'");
+        }
+
+        public DataTable TimKiem(string  strTuKhoa)
+        {
+            if (strTuKhoa == "")
+            {
+                return conn.GetDataTable("select PHONG.MaPhong,TenPhong,TrangThai,GiaTheoGio, GiaTheoNgay,TenLP, MaPT from PHONG,LOAIPHONG where PHONG.MaLP=LOAIPHONG.MaLP order by PHONG.MaPhong");
+            }
+            return conn.GetDataTable("select PHONG.MaPhong,TenPhong,TrangThai,GiaTheoGio, GiaTheoNgay,TenLP, MaPT from PHONG,LOAIPHONG where PHONG.MaLP=LOAIPHONG.MaLP  and TenPhong like N'%" + strTuKhoa + "%' order by PHONG.MaPhong");
         }
 
     }

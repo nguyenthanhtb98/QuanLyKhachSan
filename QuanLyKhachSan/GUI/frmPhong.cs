@@ -102,11 +102,18 @@ namespace QuanLyKhachSan.GUI
             try
             {
                 int i = dgvPhong.CurrentCell.RowIndex;
-                Phong p = new Phong();
-                p.MaPhong = dgvPhong.Rows[i].Cells["MaPhong"].Value.ToString();
-                dal_phong.XoaPhong(p);
-                dgvPhong.DataSource = dal_phong.ThongTinCacPhong();
-                MessageBox.Show("Xóa phòng có mã " + p.MaPhong.Trim() + " thành công");
+                if(dgvPhong.Rows[i].Cells["MaPT"].Value.ToString() == "")
+                {
+                    Phong p = new Phong();
+                    p.MaPhong = dgvPhong.Rows[i].Cells["MaPhong"].Value.ToString();
+                    dal_phong.XoaPhong(p);
+                    dgvPhong.DataSource = dal_phong.ThongTinCacPhong();
+                    MessageBox.Show("Xóa phòng có mã " + p.MaPhong.Trim() + " thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Phòng này có người thuê nên không thể xóa !!!");
+                }
             }
             catch (Exception)
             {
@@ -118,6 +125,17 @@ namespace QuanLyKhachSan.GUI
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string strTuKhoa = txtTimKiem.Text.Trim();
+            dgvPhong.DataSource = dal_phong.TimKiem(strTuKhoa);
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Clear();
         }
     }
 }
