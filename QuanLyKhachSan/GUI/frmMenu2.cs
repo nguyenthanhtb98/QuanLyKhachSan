@@ -166,5 +166,12 @@ namespace QuanLyKhachSan.GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnDSKHDaThanhToan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPrint frm = new frmPrint();
+            frm.InDSKHDaThanhToan();
+            frm.ShowDialog();   
+        }
     }
 }

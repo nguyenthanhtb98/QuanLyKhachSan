@@ -43,6 +43,9 @@
             this.XoaDV = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTenDV = new System.Windows.Forms.DataGridView();
+            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboLoaiDV = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
@@ -58,9 +61,6 @@
             this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HinhThucThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.MaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDichVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaSuDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTenDV)).BeginInit();
@@ -219,6 +219,29 @@
             this.dgvTenDV.TabIndex = 2;
             this.dgvTenDV.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTenDV_CellDoubleClick);
             // 
+            // MaDV
+            // 
+            this.MaDV.DataPropertyName = "MaDV";
+            this.MaDV.FillWeight = 109.4591F;
+            this.MaDV.HeaderText = "Mã dịch vụ";
+            this.MaDV.Name = "MaDV";
+            this.MaDV.ReadOnly = true;
+            // 
+            // TenDV1
+            // 
+            this.TenDV1.DataPropertyName = "TenDV";
+            this.TenDV1.FillWeight = 160.084F;
+            this.TenDV1.HeaderText = "Tên Dịch Vụ";
+            this.TenDV1.Name = "TenDV1";
+            this.TenDV1.ReadOnly = true;
+            // 
+            // GiaDV
+            // 
+            this.GiaDV.DataPropertyName = "GiaDV";
+            this.GiaDV.HeaderText = "Giá Dịch Vụ";
+            this.GiaDV.Name = "GiaDV";
+            this.GiaDV.ReadOnly = true;
+            // 
             // cboLoaiDV
             // 
             this.cboLoaiDV.BackColor = System.Drawing.Color.White;
@@ -376,29 +399,6 @@
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 32;
-            // 
-            // MaDV
-            // 
-            this.MaDV.DataPropertyName = "MaDV";
-            this.MaDV.FillWeight = 109.4591F;
-            this.MaDV.HeaderText = "Mã dịch vụ";
-            this.MaDV.Name = "MaDV";
-            this.MaDV.ReadOnly = true;
-            // 
-            // TenDV1
-            // 
-            this.TenDV1.DataPropertyName = "TenDV";
-            this.TenDV1.FillWeight = 160.084F;
-            this.TenDV1.HeaderText = "Tên Dịch Vụ";
-            this.TenDV1.Name = "TenDV1";
-            this.TenDV1.ReadOnly = true;
-            // 
-            // GiaDV
-            // 
-            this.GiaDV.DataPropertyName = "GiaDV";
-            this.GiaDV.HeaderText = "Giá Dịch Vụ";
-            this.GiaDV.Name = "GiaDV";
-            this.GiaDV.ReadOnly = true;
             // 
             // frmSuDungDichVu
             // 

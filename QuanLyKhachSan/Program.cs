@@ -26,6 +26,7 @@ namespace QuanLyKhachSan
             //    Application.Run(frmMenu2);
             //}
             Application.Run(new frmDangNhap());
+            //Application.Run(new frmPrint());
         }
     }
 }

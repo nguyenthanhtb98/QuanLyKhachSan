@@ -73,13 +73,13 @@ namespace QuanLyKhachSan.GUI
                 string str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim(); //lấy mã phiếu thuê
                                                                                               //tạo đối tượng hóa đơn lưu thông tin truyền qua form hóa đơn
                 HoaDon hd = new HoaDon();
-                hd.MaPT = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
-                hd.MaKH = dgvPhieuThanhToan.Rows[i].Cells[1].Value.ToString().Trim();
-                hd.TenKH = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
-                hd.GioiTinh = dgvPhieuThanhToan.Rows[i].Cells[3].Value.ToString().Trim();
-                hd.SDT = dgvPhieuThanhToan.Rows[i].Cells[4].Value.ToString().Trim();
-                hd.Email = dgvPhieuThanhToan.Rows[i].Cells[5].Value.ToString().Trim();
-                hd.CMND = dgvPhieuThanhToan.Rows[i].Cells[6].Value.ToString().Trim();
+                hd.MaPT = dgvPhieuThanhToan.Rows[i].Cells["MaPT"].Value.ToString().Trim();
+                hd.MaKH = dgvPhieuThanhToan.Rows[i].Cells["MaKH"].Value.ToString().Trim();
+                hd.TenKH = dgvPhieuThanhToan.Rows[i].Cells["TenKH"].Value.ToString().Trim();
+                hd.GioiTinh = dgvPhieuThanhToan.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
+                hd.SDT = dgvPhieuThanhToan.Rows[i].Cells["SDT"].Value.ToString().Trim();
+                hd.Email = dgvPhieuThanhToan.Rows[i].Cells["Email"].Value.ToString().Trim();
+                hd.CMND = dgvPhieuThanhToan.Rows[i].Cells["CMND"].Value.ToString().Trim();
                 hd.NgayTT = Convert.ToDateTime(DateTime.Now.ToString());
                 hd.TienPhong = dal_ThanhToan.TinhTienPhong(str_mapt.Trim());
                 hd.TienDV = dal_ThanhToan.TinhTienDichVu(str_mapt.Trim());

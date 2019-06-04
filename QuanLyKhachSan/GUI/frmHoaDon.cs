@@ -74,6 +74,8 @@ namespace QuanLyKhachSan.GUI
             ptt.GioiTinh = HD.GioiTinh;
             ptt.NgayTT = HD.NgayTT;
             ptt.SDT = HD.SDT;
+            ptt.TienDV = HD.TienDV;
+            ptt.TienPhong = HD.TienPhong;
             ptt.TongTienTT = HD.TongTienTT;
 
             dal_ThanhToan.ThemPhieuThanhToan(ptt); 

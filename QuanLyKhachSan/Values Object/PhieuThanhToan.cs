@@ -48,21 +48,21 @@ namespace QuanLyKhachSan.Values_Object
         //    set { _Email = value; }
         //}
 
-        //private int _TienPhong;
+        private int _TienPhong;
 
-        //public int TienPhong
-        //{
-        //    get { return _TienPhong; }
-        //    set { _TienPhong = value; }
-        //}
+        public int TienPhong
+        {
+            get { return _TienPhong; }
+            set { _TienPhong = value; }
+        }
 
-        //private int _TienDV;
+        private int _TienDV;
 
-        //public int TienDV
-        //{
-        //    get { return _TienDV; }
-        //    set { _TienDV = value; }
-        //}
+        public int TienDV
+        {
+            get { return _TienDV; }
+            set { _TienDV = value; }
+        }
 
         private DateTime _NgayTT;
 

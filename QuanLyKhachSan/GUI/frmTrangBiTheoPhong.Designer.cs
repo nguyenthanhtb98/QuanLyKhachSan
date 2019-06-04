@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 410);
+            this.panel1.Size = new System.Drawing.Size(1015, 437);
             this.panel1.TabIndex = 0;
             // 
             // dgvDanhSachTrangBi
@@ -85,12 +85,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDanhSachTrangBi.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDanhSachTrangBi.Location = new System.Drawing.Point(320, 25);
+            this.dgvDanhSachTrangBi.Location = new System.Drawing.Point(325, 40);
             this.dgvDanhSachTrangBi.Name = "dgvDanhSachTrangBi";
             this.dgvDanhSachTrangBi.ReadOnly = true;
             this.dgvDanhSachTrangBi.RowHeadersVisible = false;
             this.dgvDanhSachTrangBi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachTrangBi.Size = new System.Drawing.Size(575, 335);
+            this.dgvDanhSachTrangBi.Size = new System.Drawing.Size(660, 350);
             this.dgvDanhSachTrangBi.TabIndex = 6;
             this.dgvDanhSachTrangBi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTrangBi_CellClick);
             this.dgvDanhSachTrangBi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTrangBi_CellContentClick);
@@ -124,7 +124,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 156);
+            this.label4.Location = new System.Drawing.Point(25, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 2;
@@ -136,7 +136,7 @@
             this.cboTenPhong.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboTenPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTenPhong.FormattingEnabled = true;
-            this.cboTenPhong.Location = new System.Drawing.Point(122, 153);
+            this.cboTenPhong.Location = new System.Drawing.Point(114, 168);
             this.cboTenPhong.Name = "cboTenPhong";
             this.cboTenPhong.Size = new System.Drawing.Size(169, 25);
             this.cboTenPhong.TabIndex = 0;
@@ -145,7 +145,7 @@
             // txtSoLuongTB
             // 
             this.txtSoLuongTB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuongTB.Location = new System.Drawing.Point(122, 238);
+            this.txtSoLuongTB.Location = new System.Drawing.Point(114, 252);
             this.txtSoLuongTB.Name = "txtSoLuongTB";
             this.txtSoLuongTB.Size = new System.Drawing.Size(169, 25);
             this.txtSoLuongTB.TabIndex = 10;
@@ -155,7 +155,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 238);
+            this.label3.Location = new System.Drawing.Point(30, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 7;
@@ -165,7 +165,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 199);
+            this.label2.Location = new System.Drawing.Point(15, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 5;
@@ -177,7 +177,7 @@
             this.cboTenTrangBi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboTenTrangBi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTenTrangBi.FormattingEnabled = true;
-            this.cboTenTrangBi.Location = new System.Drawing.Point(122, 199);
+            this.cboTenTrangBi.Location = new System.Drawing.Point(114, 210);
             this.cboTenTrangBi.Name = "cboTenTrangBi";
             this.cboTenTrangBi.Size = new System.Drawing.Size(169, 25);
             this.cboTenTrangBi.TabIndex = 11;
@@ -198,7 +198,7 @@
             this.pnlThemTrangBiTheoPhong.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlThemTrangBiTheoPhong.Location = new System.Drawing.Point(0, 0);
             this.pnlThemTrangBiTheoPhong.Name = "pnlThemTrangBiTheoPhong";
-            this.pnlThemTrangBiTheoPhong.Size = new System.Drawing.Size(296, 410);
+            this.pnlThemTrangBiTheoPhong.Size = new System.Drawing.Size(296, 437);
             this.pnlThemTrangBiTheoPhong.TabIndex = 0;
             // 
             // btnThem
@@ -206,7 +206,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(36, 25);
+            this.btnThem.Location = new System.Drawing.Point(28, 40);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
             this.btnThem.TabIndex = 27;
@@ -218,7 +218,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(159, 25);
+            this.btnSua.Location = new System.Drawing.Point(151, 40);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 26;
@@ -230,7 +230,7 @@
             this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.Appearance.Options.UseFont = true;
             this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
-            this.btnTroVe.Location = new System.Drawing.Point(159, 86);
+            this.btnTroVe.Location = new System.Drawing.Point(151, 101);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(101, 38);
             this.btnTroVe.TabIndex = 29;
@@ -242,7 +242,7 @@
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(36, 86);
+            this.btnXoa.Location = new System.Drawing.Point(28, 101);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
             this.btnXoa.TabIndex = 28;
@@ -262,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 410);
+            this.ClientSize = new System.Drawing.Size(1015, 437);
             this.Controls.Add(this.pnlThemTrangBiTheoPhong);
             this.Controls.Add(this.panel1);
             this.Name = "frmTrangBiTheoPhong";
