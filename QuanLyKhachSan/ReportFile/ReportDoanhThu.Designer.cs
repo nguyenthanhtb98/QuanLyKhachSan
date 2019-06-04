@@ -159,7 +159,7 @@
             // xrTableCell3
             // 
             this.xrTableCell3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PHIEUTHANHTOAN.TienDV", "{0:#,#} (đ)")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PHIEUTHANHTOAN.TienDV", "{0:n0} (đ)")});
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 100F);
             this.xrTableCell3.StylePriority.UsePadding = false;
@@ -171,7 +171,7 @@
             // xrTableCell11
             // 
             this.xrTableCell11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PHIEUTHANHTOAN.TienPhong", "{0:#,#} (đ)")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PHIEUTHANHTOAN.TienPhong", "{0:n0} (đ)")});
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 100F);
             this.xrTableCell11.StylePriority.UsePadding = false;
@@ -183,7 +183,7 @@
             // xrTableCell5
             // 
             this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PHIEUTHANHTOAN.TongTienTT", "{0:#,#} (đ)")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "PHIEUTHANHTOAN.TongTienTT", "{0:n0} (đ)")});
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100F);
             this.xrTableCell5.StylePriority.UsePadding = false;
@@ -332,7 +332,7 @@
             this.xrLabel5.StylePriority.UseBorders = false;
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
-            xrSummary2.FormatString = "{0:#,#} (đ)";
+            xrSummary2.FormatString = "{0:n0} (đ)";
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel5.Summary = xrSummary2;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -349,7 +349,7 @@
             this.xrLabel4.StylePriority.UseBorders = false;
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
-            xrSummary3.FormatString = "{0:#,#} (đ)";
+            xrSummary3.FormatString = "{0:n0} (đ)";
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel4.Summary = xrSummary3;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -366,7 +366,7 @@
             this.xrLabel1.StylePriority.UseBorders = false;
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            xrSummary4.FormatString = "{0:#,#} (đ)";
+            xrSummary4.FormatString = "{0:n0} (đ)";
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel1.Summary = xrSummary4;
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;

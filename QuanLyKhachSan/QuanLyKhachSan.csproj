@@ -205,6 +205,12 @@
     <Compile Include="ReportFile\ReportDoanhThu.Designer.cs">
       <DependentUpon>ReportDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportFile\ReportHoaDon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportFile\ReportHoaDon.Designer.cs">
+      <DependentUpon>ReportHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportFile\ReportPhong.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFile\ReportDoanhThu.resx">
       <DependentUpon>ReportDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFile\ReportHoaDon.resx">
+      <DependentUpon>ReportHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportFile\ReportPhong.resx">
       <DependentUpon>ReportPhong.cs</DependentUpon>

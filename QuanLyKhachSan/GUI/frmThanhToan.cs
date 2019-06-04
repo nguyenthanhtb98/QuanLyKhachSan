@@ -135,12 +135,31 @@ namespace QuanLyKhachSan.GUI
 
         private void btnXemHoaDon_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            if (dgvPhieuThanhToan.RowCount > 0) // 
+            {
+                //lấy thông tin của khách hàng thuê phòng cho vào  hóa đơn
+                int i = dgvPhieuThanhToan.CurrentCell.RowIndex; //lấy chỉ số hàng
+                string str_mapt = dgvPhieuThanhToan.Rows[i].Cells["MaPT"].Value.ToString().Trim(); //lấy mã phiếu thuê
+                string str_TenKH = dgvPhieuThanhToan.Rows[i].Cells["TenKH"].Value.ToString().Trim();
+                string str_GioiTinh = dgvPhieuThanhToan.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
+                string str_SDT = dgvPhieuThanhToan.Rows[i].Cells["SDT"].Value.ToString().Trim();
+                string str_Email = dgvPhieuThanhToan.Rows[i].Cells["Email"].Value.ToString().Trim();
+                string str_CMND = dgvPhieuThanhToan.Rows[i].Cells["CMND"].Value.ToString().Trim();
+                int int_TienPhong = dal_ThanhToan.TinhTienPhong(str_mapt.Trim());
+                int int_TienDV = dal_ThanhToan.TinhTienDichVu(str_mapt.Trim());
+                int int_TongTienTT = int_TienPhong + int_TienDV;
+                //làm print hóa  đơn kiểu mới, dev express
+                frmPrint frm = new frmPrint();
+                frm.InHoaDon(str_TenKH,str_GioiTinh,str_Email,str_SDT,str_CMND,int_TienDV,int_TienPhong,int_TongTienTT);
+                frm.ShowDialog();
+            }
+            ////cái này cho form hóa đơn cũ, cùi hơn cái print của dev
+            //printPreviewDialog1.Document = printDocument1;
+            //printPreviewDialog1.ShowDialog();
         }
 
         /// <summary>
-        /// xem hóa đơn
+        /// xem hóa đơn bằng printDocument win form phải vẽ đồ họa tốn thời gian, (bài hiện tại đang dùng của dev express)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -46,9 +46,9 @@ namespace QuanLyKhachSan.GUI
             lblSDT.Text = HD.SDT;
             lblEmail.Text = HD.Email;
             lblCMND.Text = HD.CMND;
-            lblTienDV.Text = HD.TienDV.ToString();
-            lblTienPhong.Text = HD.TienPhong.ToString();
-            lblTongTienTT.Text = HD.TongTienTT.ToString();
+            lblTienDV.Text = string.Format("{0:n0}",HD.TienDV);
+            lblTienPhong.Text = string.Format("{0:n0}",HD.TienPhong);          
+            lblTongTienTT.Text = string.Format("{0:n0}", HD.TongTienTT);
             lblNgayTT.Text = HD.NgayTT.ToString();
         }
         //private string MaPT; //tạo biến lưu mã phiếu thuê từ form Thanh toán

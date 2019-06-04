@@ -20,7 +20,16 @@ namespace QuanLyKhachSan.GUI
 	
         private void button1_Click(object sender, EventArgs e)
         {
-            frmSuDungDichVu.SDDV_SoLuong = Convert.ToInt32(txtSoLuongDV.Text);
+            try
+            {
+                frmSuDungDichVu.SDDV_SoLuong = Convert.ToInt32(txtSoLuongDV.Text);
+            }
+            catch (Exception)
+            {
+
+                frmSuDungDichVu.SDDV_SoLuong = 1;
+            }
+
             this.Close();
         }
 

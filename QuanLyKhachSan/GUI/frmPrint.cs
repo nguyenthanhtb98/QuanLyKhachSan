@@ -46,5 +46,16 @@ namespace QuanLyKhachSan.GUI
             documentViewer1.DocumentSource = report;
             report.CreateDocument();
         }
+        public void InHoaDon(string strTenKH, string strGT, string strEmail, string strSDT, string strCMND, int TienDV, int TienPhong, int TongTien)
+        {
+            ReportHoaDon report = new ReportHoaDon();
+            report.KhoiTaoDuLieu(strTenKH,strGT,strEmail,strSDT,strCMND,TienDV,TienPhong,TongTien); // truyền dữ liệu vào parameter trong printdocument hóa đơn
+            foreach (var item in report.Parameters)
+            {
+                item.Visible = false;
+            }
+            documentViewer1.DocumentSource = report;
+            report.CreateDocument();
+        }
     }
 }
