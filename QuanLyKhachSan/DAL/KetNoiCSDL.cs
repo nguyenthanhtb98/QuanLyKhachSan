@@ -12,7 +12,7 @@ namespace QuanLyKhachSan.DAL
     class KetNoiCSDL
     {
         private SqlConnection conn;
-        private string strConn = @"Data Source=DESKTOP-NE70A7B;Initial Catalog=QLKHACHSAN;Integrated Security=True";
+        private string strConn = @"Data Source=(local);Initial Catalog=QLKHACHSAN;Integrated Security=True";
         public void MoKetNoi()
         {
             if(conn==null)

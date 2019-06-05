@@ -58,14 +58,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 471);
+            this.panel2.Size = new System.Drawing.Size(317, 471);
             this.panel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 168);
+            this.label1.Location = new System.Drawing.Point(38, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 20;
@@ -76,7 +76,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(30, 36);
+            this.btnThem.Location = new System.Drawing.Point(41, 36);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
             this.btnThem.TabIndex = 17;
@@ -88,7 +88,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(153, 36);
+            this.btnSua.Location = new System.Drawing.Point(164, 36);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 16;
@@ -100,7 +100,7 @@
             this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.Appearance.Options.UseFont = true;
             this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
-            this.btnTroVe.Location = new System.Drawing.Point(153, 97);
+            this.btnTroVe.Location = new System.Drawing.Point(164, 97);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(101, 38);
             this.btnTroVe.TabIndex = 19;
@@ -112,7 +112,7 @@
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(30, 97);
+            this.btnXoa.Location = new System.Drawing.Point(41, 97);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
             this.btnXoa.TabIndex = 18;
@@ -122,9 +122,9 @@
             // txtTenTB
             // 
             this.txtTenTB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTB.Location = new System.Drawing.Point(30, 201);
+            this.txtTenTB.Location = new System.Drawing.Point(41, 200);
             this.txtTenTB.Name = "txtTenTB";
-            this.txtTenTB.Size = new System.Drawing.Size(212, 25);
+            this.txtTenTB.Size = new System.Drawing.Size(224, 25);
             this.txtTenTB.TabIndex = 13;
             // 
             // panel3
@@ -132,9 +132,9 @@
             this.panel3.BackColor = System.Drawing.Color.Khaki;
             this.panel3.Controls.Add(this.dgvDanhSachTrangBi);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(288, 0);
+            this.panel3.Location = new System.Drawing.Point(317, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(771, 471);
+            this.panel3.Size = new System.Drawing.Size(742, 471);
             this.panel3.TabIndex = 2;
             // 
             // dgvDanhSachTrangBi
@@ -163,7 +163,7 @@
             this.dgvDanhSachTrangBi.ReadOnly = true;
             this.dgvDanhSachTrangBi.RowHeadersVisible = false;
             this.dgvDanhSachTrangBi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachTrangBi.Size = new System.Drawing.Size(713, 409);
+            this.dgvDanhSachTrangBi.Size = new System.Drawing.Size(684, 409);
             this.dgvDanhSachTrangBi.TabIndex = 7;
             this.dgvDanhSachTrangBi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTrangBi_CellClick);
             // 

@@ -75,6 +75,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.rdiNu);
             this.panel4.Controls.Add(this.btnQuayLai);
             this.panel4.Controls.Add(this.rdiNam);
@@ -97,13 +98,13 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(332, 508);
+            this.panel4.Size = new System.Drawing.Size(412, 508);
             this.panel4.TabIndex = 44;
             // 
             // rdiNu
             // 
             this.rdiNu.AutoSize = true;
-            this.rdiNu.Location = new System.Drawing.Point(213, 91);
+            this.rdiNu.Location = new System.Drawing.Point(221, 91);
             this.rdiNu.Name = "rdiNu";
             this.rdiNu.Size = new System.Drawing.Size(39, 17);
             this.rdiNu.TabIndex = 63;
@@ -115,10 +116,10 @@
             this.btnQuayLai.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnQuayLai.BackColor = System.Drawing.Color.YellowGreen;
             this.btnQuayLai.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(162, 452);
+            this.btnQuayLai.Location = new System.Drawing.Point(192, 450);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(143, 44);
-            this.btnQuayLai.TabIndex = 45;
+            this.btnQuayLai.TabIndex = 62;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click_1);
@@ -127,7 +128,7 @@
             // 
             this.rdiNam.AutoSize = true;
             this.rdiNam.Checked = true;
-            this.rdiNam.Location = new System.Drawing.Point(131, 91);
+            this.rdiNam.Location = new System.Drawing.Point(139, 91);
             this.rdiNam.Name = "rdiNam";
             this.rdiNam.Size = new System.Drawing.Size(47, 17);
             this.rdiNam.TabIndex = 62;
@@ -140,10 +141,10 @@
             this.btnXacNhanThue.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnXacNhanThue.BackColor = System.Drawing.Color.YellowGreen;
             this.btnXacNhanThue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhanThue.Location = new System.Drawing.Point(12, 452);
+            this.btnXacNhanThue.Location = new System.Drawing.Point(42, 450);
             this.btnXacNhanThue.Name = "btnXacNhanThue";
             this.btnXacNhanThue.Size = new System.Drawing.Size(144, 44);
-            this.btnXacNhanThue.TabIndex = 44;
+            this.btnXacNhanThue.TabIndex = 61;
             this.btnXacNhanThue.Text = "Xác Nhận Thuê";
             this.btnXacNhanThue.UseVisualStyleBackColor = false;
             this.btnXacNhanThue.Click += new System.EventHandler(this.btnXacNhanThue_Click_1);
@@ -187,7 +188,7 @@
             "Theo Ngày"});
             this.cboHinhThucThue.Location = new System.Drawing.Point(26, 412);
             this.cboHinhThucThue.Name = "cboHinhThucThue";
-            this.cboHinhThucThue.Size = new System.Drawing.Size(261, 25);
+            this.cboHinhThucThue.Size = new System.Drawing.Size(152, 25);
             this.cboHinhThucThue.TabIndex = 60;
             this.cboHinhThucThue.Text = "Theo Ngày";
             // 
@@ -236,7 +237,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(26, 196);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(261, 25);
+            this.txtEmail.Size = new System.Drawing.Size(327, 25);
             this.txtEmail.TabIndex = 48;
             // 
             // label7
@@ -254,7 +255,7 @@
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(26, 142);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(261, 25);
+            this.txtSDT.Size = new System.Drawing.Size(327, 25);
             this.txtSDT.TabIndex = 47;
             // 
             // dateNgayDi
@@ -264,7 +265,7 @@
             this.dateNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgayDi.Location = new System.Drawing.Point(26, 358);
             this.dateNgayDi.Name = "dateNgayDi";
-            this.dateNgayDi.Size = new System.Drawing.Size(261, 25);
+            this.dateNgayDi.Size = new System.Drawing.Size(327, 25);
             this.dateNgayDi.TabIndex = 57;
             // 
             // txtCMND
@@ -272,7 +273,7 @@
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(26, 250);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(261, 25);
+            this.txtCMND.Size = new System.Drawing.Size(327, 25);
             this.txtCMND.TabIndex = 49;
             // 
             // txtTenKH
@@ -280,8 +281,8 @@
             this.txtTenKH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.Location = new System.Drawing.Point(26, 51);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(261, 25);
-            this.txtTenKH.TabIndex = 45;
+            this.txtTenKH.Size = new System.Drawing.Size(327, 25);
+            this.txtTenKH.TabIndex = 40;
             // 
             // dateNgayDen
             // 
@@ -290,17 +291,18 @@
             this.dateNgayDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgayDen.Location = new System.Drawing.Point(26, 304);
             this.dateNgayDen.Name = "dateNgayDen";
-            this.dateNgayDen.Size = new System.Drawing.Size(261, 25);
+            this.dateNgayDen.Size = new System.Drawing.Size(327, 25);
             this.dateNgayDen.TabIndex = 56;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Khaki;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.dgvThuePhong);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(332, 0);
+            this.panel5.Location = new System.Drawing.Point(412, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(743, 508);
+            this.panel5.Size = new System.Drawing.Size(663, 508);
             this.panel5.TabIndex = 45;
             // 
             // dgvThuePhong
@@ -341,7 +343,7 @@
             this.dgvThuePhong.Name = "dgvThuePhong";
             this.dgvThuePhong.RowHeadersVisible = false;
             this.dgvThuePhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThuePhong.Size = new System.Drawing.Size(689, 465);
+            this.dgvThuePhong.Size = new System.Drawing.Size(605, 465);
             this.dgvThuePhong.TabIndex = 46;
             // 
             // ChonThue

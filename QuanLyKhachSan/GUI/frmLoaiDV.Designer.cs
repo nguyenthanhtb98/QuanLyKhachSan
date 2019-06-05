@@ -51,9 +51,9 @@
             this.panel3.BackColor = System.Drawing.Color.Khaki;
             this.panel3.Controls.Add(this.dgvLoaiDV);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(288, 0);
+            this.panel3.Location = new System.Drawing.Point(317, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(628, 477);
+            this.panel3.Size = new System.Drawing.Size(599, 477);
             this.panel3.TabIndex = 4;
             // 
             // dgvLoaiDV
@@ -72,7 +72,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(41)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Chartreuse;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -82,7 +82,7 @@
             this.dgvLoaiDV.ReadOnly = true;
             this.dgvLoaiDV.RowHeadersVisible = false;
             this.dgvLoaiDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoaiDV.Size = new System.Drawing.Size(570, 409);
+            this.dgvLoaiDV.Size = new System.Drawing.Size(541, 409);
             this.dgvLoaiDV.TabIndex = 7;
             this.dgvLoaiDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiDV_CellClick);
             // 
@@ -106,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 168);
+            this.label1.Location = new System.Drawing.Point(41, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 20;
@@ -117,7 +117,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(30, 36);
+            this.btnThem.Location = new System.Drawing.Point(44, 36);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
             this.btnThem.TabIndex = 17;
@@ -129,7 +129,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(153, 36);
+            this.btnSua.Location = new System.Drawing.Point(167, 36);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 16;
@@ -141,7 +141,7 @@
             this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.Appearance.Options.UseFont = true;
             this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
-            this.btnTroVe.Location = new System.Drawing.Point(153, 97);
+            this.btnTroVe.Location = new System.Drawing.Point(167, 97);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(101, 38);
             this.btnTroVe.TabIndex = 19;
@@ -153,7 +153,7 @@
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(30, 97);
+            this.btnXoa.Location = new System.Drawing.Point(44, 97);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
             this.btnXoa.TabIndex = 18;
@@ -163,9 +163,9 @@
             // txtTenLoaiDV
             // 
             this.txtTenLoaiDV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLoaiDV.Location = new System.Drawing.Point(30, 201);
+            this.txtTenLoaiDV.Location = new System.Drawing.Point(44, 203);
             this.txtTenLoaiDV.Name = "txtTenLoaiDV";
-            this.txtTenLoaiDV.Size = new System.Drawing.Size(212, 25);
+            this.txtTenLoaiDV.Size = new System.Drawing.Size(224, 25);
             this.txtTenLoaiDV.TabIndex = 13;
             // 
             // panel2
@@ -180,7 +180,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 477);
+            this.panel2.Size = new System.Drawing.Size(317, 477);
             this.panel2.TabIndex = 3;
             // 
             // frmLoaiDV

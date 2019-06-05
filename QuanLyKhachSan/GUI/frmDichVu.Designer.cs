@@ -56,9 +56,9 @@
             this.panel3.BackColor = System.Drawing.Color.Khaki;
             this.panel3.Controls.Add(this.dgvDV);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(288, 0);
+            this.panel3.Location = new System.Drawing.Point(317, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(646, 478);
+            this.panel3.Size = new System.Drawing.Size(617, 478);
             this.panel3.TabIndex = 6;
             // 
             // dgvDV
@@ -78,7 +78,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(41)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Chartreuse;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -88,7 +88,7 @@
             this.dgvDV.ReadOnly = true;
             this.dgvDV.RowHeadersVisible = false;
             this.dgvDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDV.Size = new System.Drawing.Size(615, 396);
+            this.dgvDV.Size = new System.Drawing.Size(586, 396);
             this.dgvDV.TabIndex = 10;
             this.dgvDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDV_CellClick);
             // 
@@ -131,7 +131,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 478);
+            this.panel2.Size = new System.Drawing.Size(317, 478);
             this.panel2.TabIndex = 5;
             // 
             // label6
@@ -139,7 +139,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(27, 165);
+            this.label6.Location = new System.Drawing.Point(35, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 12;
@@ -148,9 +148,9 @@
             // txtGiaDV
             // 
             this.txtGiaDV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaDV.Location = new System.Drawing.Point(30, 332);
+            this.txtGiaDV.Location = new System.Drawing.Point(38, 331);
             this.txtGiaDV.Name = "txtGiaDV";
-            this.txtGiaDV.Size = new System.Drawing.Size(212, 25);
+            this.txtGiaDV.Size = new System.Drawing.Size(225, 25);
             this.txtGiaDV.TabIndex = 22;
             // 
             // cboLoaiDV
@@ -159,9 +159,9 @@
             this.cboLoaiDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiDV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboLoaiDV.FormattingEnabled = true;
-            this.cboLoaiDV.Location = new System.Drawing.Point(31, 196);
+            this.cboLoaiDV.Location = new System.Drawing.Point(39, 195);
             this.cboLoaiDV.Name = "cboLoaiDV";
-            this.cboLoaiDV.Size = new System.Drawing.Size(109, 21);
+            this.cboLoaiDV.Size = new System.Drawing.Size(122, 21);
             this.cboLoaiDV.TabIndex = 9;
             this.cboLoaiDV.SelectedIndexChanged += new System.EventHandler(this.cboLoaiDV_SelectedIndexChanged);
             // 
@@ -169,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 301);
+            this.label3.Location = new System.Drawing.Point(36, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 21;
@@ -179,7 +179,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 231);
+            this.label1.Location = new System.Drawing.Point(35, 230);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 20;
@@ -190,7 +190,7 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(30, 36);
+            this.btnThem.Location = new System.Drawing.Point(39, 36);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
             this.btnThem.TabIndex = 17;
@@ -202,7 +202,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(153, 36);
+            this.btnSua.Location = new System.Drawing.Point(162, 36);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 16;
@@ -214,7 +214,7 @@
             this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.Appearance.Options.UseFont = true;
             this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
-            this.btnTroVe.Location = new System.Drawing.Point(153, 97);
+            this.btnTroVe.Location = new System.Drawing.Point(162, 97);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(101, 38);
             this.btnTroVe.TabIndex = 19;
@@ -226,7 +226,7 @@
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(30, 97);
+            this.btnXoa.Location = new System.Drawing.Point(39, 97);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
             this.btnXoa.TabIndex = 18;
@@ -236,9 +236,9 @@
             // txtTenDV
             // 
             this.txtTenDV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDV.Location = new System.Drawing.Point(30, 262);
+            this.txtTenDV.Location = new System.Drawing.Point(38, 261);
             this.txtTenDV.Name = "txtTenDV";
-            this.txtTenDV.Size = new System.Drawing.Size(212, 25);
+            this.txtTenDV.Size = new System.Drawing.Size(225, 25);
             this.txtTenDV.TabIndex = 13;
             // 
             // frmDichVu

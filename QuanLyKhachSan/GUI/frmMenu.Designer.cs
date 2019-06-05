@@ -406,6 +406,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnThanhToan);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSDDV);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Chức năng";
             // 
             // ribbonPageGroup3
@@ -413,6 +414,7 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btnDangXuat, true);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnThoat);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.ShowCaptionButton = false;
             this.ribbonPageGroup3.Text = "Hệ thống";
             // 
             // rbbQuanLy
@@ -432,6 +434,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBi);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBiTheoPhong);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Quản lý";
             // 
             // ribbonPageGroup6
@@ -439,6 +442,7 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.btnLoaiDV);
             this.ribbonPageGroup6.ItemLinks.Add(this.btnDichVu);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.ShowCaptionButton = false;
             this.ribbonPageGroup6.Text = "Dịch vụ";
             // 
             // rbbThongKe
@@ -454,6 +458,7 @@
             this.rbbTK.ItemLinks.Add(this.btnDSKHDaThanhToan);
             this.rbbTK.ItemLinks.Add(this.btnThongKePhong);
             this.rbbTK.Name = "rbbTK";
+            this.rbbTK.ShowCaptionButton = false;
             this.rbbTK.Text = "Thống kê";
             // 
             // rbbTroGiup
@@ -469,6 +474,7 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.btnTroGiup);
             this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.ShowCaptionButton = false;
             this.ribbonPageGroup7.Text = "Trợ giúp";
             // 
             // documentManager1
