@@ -42,7 +42,7 @@ namespace QuanLyKhachSan
                     frmMenu frm = new frmMenu();
                     frm.LayThongTinTaiKhoan(taikhoan);
                     frm.ShowDialog();
-                    this.Close();
+                    this.Show();
 
                 }
                 else

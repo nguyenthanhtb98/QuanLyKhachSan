@@ -115,9 +115,6 @@ namespace QuanLyKhachSan.GUI
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Hide();           
-            frmDangNhap frm = new frmDangNhap();
-            frm.ShowDialog();
             this.Close();
 
         }

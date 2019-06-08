@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTroGiup));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblThongTinTrang = new System.Windows.Forms.Label();
+            this.lblTrang = new System.Windows.Forms.Label();
             this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
             this.btnSau = new DevExpress.XtraEditors.SimpleButton();
             this.btnTruoc = new DevExpress.XtraEditors.SimpleButton();
             this.pnlTroGiup_SDDV = new System.Windows.Forms.Panel();
             this.pnlTroGiup_ThanhToan = new System.Windows.Forms.Panel();
             this.pnlTroGiup_ThuePhong = new System.Windows.Forms.Panel();
-            this.lblTrang = new System.Windows.Forms.Label();
-            this.lblThongTinTrang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,27 @@
             this.panel1.Size = new System.Drawing.Size(875, 35);
             this.panel1.TabIndex = 4;
             // 
+            // lblThongTinTrang
+            // 
+            this.lblThongTinTrang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblThongTinTrang.AutoSize = true;
+            this.lblThongTinTrang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongTinTrang.Location = new System.Drawing.Point(396, 10);
+            this.lblThongTinTrang.Name = "lblThongTinTrang";
+            this.lblThongTinTrang.Size = new System.Drawing.Size(98, 17);
+            this.lblThongTinTrang.TabIndex = 7;
+            this.lblThongTinTrang.Text = "Thông tin trang";
+            // 
+            // lblTrang
+            // 
+            this.lblTrang.AutoSize = true;
+            this.lblTrang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrang.Location = new System.Drawing.Point(260, 10);
+            this.lblTrang.Name = "lblTrang";
+            this.lblTrang.Size = new System.Drawing.Size(44, 17);
+            this.lblTrang.TabIndex = 6;
+            this.lblTrang.Text = "Trang:";
+            // 
             // btnTroVe
             // 
             this.btnTroVe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -68,6 +89,7 @@
             // btnSau
             // 
             this.btnSau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSau.ImageOptions.Image")));
+            this.btnSau.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.btnSau.Location = new System.Drawing.Point(95, 3);
             this.btnSau.Name = "btnSau";
             this.btnSau.Size = new System.Drawing.Size(86, 29);
@@ -111,27 +133,6 @@
             this.pnlTroGiup_ThuePhong.Name = "pnlTroGiup_ThuePhong";
             this.pnlTroGiup_ThuePhong.Size = new System.Drawing.Size(210, 154);
             this.pnlTroGiup_ThuePhong.TabIndex = 0;
-            // 
-            // lblTrang
-            // 
-            this.lblTrang.AutoSize = true;
-            this.lblTrang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrang.Location = new System.Drawing.Point(260, 10);
-            this.lblTrang.Name = "lblTrang";
-            this.lblTrang.Size = new System.Drawing.Size(44, 17);
-            this.lblTrang.TabIndex = 6;
-            this.lblTrang.Text = "Trang:";
-            // 
-            // lblThongTinTrang
-            // 
-            this.lblThongTinTrang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblThongTinTrang.AutoSize = true;
-            this.lblThongTinTrang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinTrang.Location = new System.Drawing.Point(396, 10);
-            this.lblThongTinTrang.Name = "lblThongTinTrang";
-            this.lblThongTinTrang.Size = new System.Drawing.Size(98, 17);
-            this.lblThongTinTrang.TabIndex = 7;
-            this.lblThongTinTrang.Text = "Thông tin trang";
             // 
             // frmTroGiup
             // 
