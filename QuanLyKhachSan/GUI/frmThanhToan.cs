@@ -23,27 +23,6 @@ namespace QuanLyKhachSan.GUI
         public frmThanhToan()
         {
             InitializeComponent();
-            //định dạng lại cột chứa ngày tháng, vì khi up từ csdl mặc định MM/dd/yyyy
-            dgvPhieuThanhToan.Columns["NgayDen"].DefaultCellStyle.Format = "dd/MM/yyyy hh:mm:ss tt";
-            dgvPhieuThanhToan.Columns["NgayDi"].DefaultCellStyle.Format = "dd/MM/yyyy hh:mm:ss tt";
-            //Lấy Danh sách các khách hàng thuê phòng
-            dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
-
-            //lấy dữ liệu của phiếu thuê đầu tiên
-            if (dgvPhieuThanhToan.RowCount>0)
-            {
-                string str_mapt = dgvPhieuThanhToan.Rows[0].Cells[0].Value.ToString().Trim();
-                lblTenKH.Text = dgvPhieuThanhToan.Rows[0].Cells[2].Value.ToString().Trim();
-                dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
-                dgvPhong.Columns["GiaTheoGio"].DefaultCellStyle.Format = "#,#";
-                dgvPhong.Columns["GiaTheoNgay"].DefaultCellStyle.Format = "#,#";
-                dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
-                dgvDichVuDaSuDung.Columns["GiaDV"].DefaultCellStyle.Format = "#,#";
-
-                lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
-                lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
-            }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,11 +32,25 @@ namespace QuanLyKhachSan.GUI
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             // mỗi lần click trên datagridview sẽ lấy thông tin theo mã phiếu thuê
-            int i = dgvPhieuThanhToan.CurrentCell.RowIndex;
-            string str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
-
-            lblTenKH.Text = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
+            int i = dgvKhachHang.CurrentCell.RowIndex;
+            string str_mapt = dgvKhachHang.Rows[i].Cells[0].Value.ToString().Trim();
+            //set thuộc tính min date ngày đi, sẽ có 2 trường hợp có thể xảy ra
+            //1. ngày đến của khách hàng < ngày hiện tại, 2.Ngày đến của khách hàng > ngày hiện tại
+            DateTime NgayDen =Convert.ToDateTime( dgvKhachHang.Rows[i].Cells["NgayDen"].Value.ToString());
+            if (NgayDen < DateTime.Now)
+            {
+                dateNgayDi.MinDate = DateTime.Now;
+                dateNgayDi.Value = dateNgayDi.MinDate;
+            }
+            else
+            {
+                dateNgayDi.MinDate = NgayDen;
+                dateNgayDi.Value = dateNgayDi.MinDate;
+            } 
+            
+            lblTenKH.Text = dgvKhachHang.Rows[i].Cells[2].Value.ToString().Trim();
             dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
             dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
             lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
@@ -66,20 +59,20 @@ namespace QuanLyKhachSan.GUI
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if(dgvPhieuThanhToan.RowCount>0)
+            if(dgvKhachHang.RowCount>0)
             {
                 //lấy thông tin của khách hàng thuê phòng cho vào form hóa đơn
-                int i = dgvPhieuThanhToan.CurrentCell.RowIndex; //lấy chỉ số hàng
-                string str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim(); //lấy mã phiếu thuê
+                int i = dgvKhachHang.CurrentCell.RowIndex; //lấy chỉ số hàng
+                string str_mapt = dgvKhachHang.Rows[i].Cells[0].Value.ToString().Trim(); //lấy mã phiếu thuê
                                                                                               //tạo đối tượng hóa đơn lưu thông tin truyền qua form hóa đơn
                 HoaDon hd = new HoaDon();
-                hd.MaPT = dgvPhieuThanhToan.Rows[i].Cells["MaPT"].Value.ToString().Trim();
-                hd.MaKH = dgvPhieuThanhToan.Rows[i].Cells["MaKH"].Value.ToString().Trim();
-                hd.TenKH = dgvPhieuThanhToan.Rows[i].Cells["TenKH"].Value.ToString().Trim();
-                hd.GioiTinh = dgvPhieuThanhToan.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
-                hd.SDT = dgvPhieuThanhToan.Rows[i].Cells["SDT"].Value.ToString().Trim();
-                hd.Email = dgvPhieuThanhToan.Rows[i].Cells["Email"].Value.ToString().Trim();
-                hd.CMND = dgvPhieuThanhToan.Rows[i].Cells["CMND"].Value.ToString().Trim();
+                hd.MaPT = dgvKhachHang.Rows[i].Cells["MaPT"].Value.ToString().Trim();
+                hd.MaKH = dgvKhachHang.Rows[i].Cells["MaKH"].Value.ToString().Trim();
+                hd.TenKH = dgvKhachHang.Rows[i].Cells["TenKH"].Value.ToString().Trim();
+                hd.GioiTinh = dgvKhachHang.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
+                hd.SDT = dgvKhachHang.Rows[i].Cells["SDT"].Value.ToString().Trim();
+                hd.Email = dgvKhachHang.Rows[i].Cells["Email"].Value.ToString().Trim();
+                hd.CMND = dgvKhachHang.Rows[i].Cells["CMND"].Value.ToString().Trim();
                 hd.NgayTT = Convert.ToDateTime(DateTime.Now.ToString());
                 hd.TienPhong = dal_ThanhToan.TinhTienPhong(str_mapt.Trim());
                 hd.TienDV = dal_ThanhToan.TinhTienDichVu(str_mapt.Trim());
@@ -90,12 +83,12 @@ namespace QuanLyKhachSan.GUI
                 frm.ShowDialog();
 
                 //cập nhật lại thông tin danh sách người đang thuê phòng và các thông tin phòng dịch vụ
-                dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
-                if (dgvPhieuThanhToan.RowCount > 0) // tránh trường hợp không có gì gây lỗi
+                dgvKhachHang.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
+                if (dgvKhachHang.RowCount > 0) // tránh trường hợp không có gì gây lỗi
                 {
-                    i = dgvPhieuThanhToan.CurrentCell.RowIndex;
-                    str_mapt = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
-                    lblTenKH.Text = dgvPhieuThanhToan.Rows[i].Cells[2].Value.ToString().Trim();
+                    i = dgvKhachHang.CurrentCell.RowIndex;
+                    str_mapt = dgvKhachHang.Rows[i].Cells[0].Value.ToString().Trim();
+                    lblTenKH.Text = dgvKhachHang.Rows[i].Cells[2].Value.ToString().Trim();
                     dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
                     dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
                     lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
@@ -117,15 +110,15 @@ namespace QuanLyKhachSan.GUI
             if(result == DialogResult.Yes)
             {
                 // lấy thông tin
-                int i = dgvPhieuThanhToan.CurrentCell.RowIndex;
+                int i = dgvKhachHang.CurrentCell.RowIndex;
 
                 PhieuThue pt = new PhieuThue();
-                pt.MaPT = dgvPhieuThanhToan.Rows[i].Cells[0].Value.ToString().Trim();
+                pt.MaPT = dgvKhachHang.Rows[i].Cells[0].Value.ToString().Trim();
                 pt.NgayDi = dateNgayDi.Value;
                 dal_PhieuThue.SuaPhieuThue(pt);
 
                 //cập nhật lại dgvPhieuthanhtoan
-                dgvPhieuThanhToan.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
+                dgvKhachHang.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
                 //cập nhật lại tiền phòng
                 lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(pt.MaPT));
                 //lblTienPhong.Text = dal_ThanhToan.TinhTienPhong(pt.MaPT).ToString();
@@ -135,16 +128,16 @@ namespace QuanLyKhachSan.GUI
 
         private void btnXemHoaDon_Click(object sender, EventArgs e)
         {
-            if (dgvPhieuThanhToan.RowCount > 0) // 
+            if (dgvKhachHang.RowCount > 0) // 
             {
                 //lấy thông tin của khách hàng thuê phòng cho vào  hóa đơn
-                int i = dgvPhieuThanhToan.CurrentCell.RowIndex; //lấy chỉ số hàng
-                string str_mapt = dgvPhieuThanhToan.Rows[i].Cells["MaPT"].Value.ToString().Trim(); //lấy mã phiếu thuê
-                string str_TenKH = dgvPhieuThanhToan.Rows[i].Cells["TenKH"].Value.ToString().Trim();
-                string str_GioiTinh = dgvPhieuThanhToan.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
-                string str_SDT = dgvPhieuThanhToan.Rows[i].Cells["SDT"].Value.ToString().Trim();
-                string str_Email = dgvPhieuThanhToan.Rows[i].Cells["Email"].Value.ToString().Trim();
-                string str_CMND = dgvPhieuThanhToan.Rows[i].Cells["CMND"].Value.ToString().Trim();
+                int i = dgvKhachHang.CurrentCell.RowIndex; //lấy chỉ số hàng
+                string str_mapt = dgvKhachHang.Rows[i].Cells["MaPT"].Value.ToString().Trim(); //lấy mã phiếu thuê
+                string str_TenKH = dgvKhachHang.Rows[i].Cells["TenKH"].Value.ToString().Trim();
+                string str_GioiTinh = dgvKhachHang.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
+                string str_SDT = dgvKhachHang.Rows[i].Cells["SDT"].Value.ToString().Trim();
+                string str_Email = dgvKhachHang.Rows[i].Cells["Email"].Value.ToString().Trim();
+                string str_CMND = dgvKhachHang.Rows[i].Cells["CMND"].Value.ToString().Trim();
                 int int_TienPhong = dal_ThanhToan.TinhTienPhong(str_mapt.Trim());
                 int int_TienDV = dal_ThanhToan.TinhTienDichVu(str_mapt.Trim());
                 int int_TongTienTT = int_TienPhong + int_TienDV;
@@ -165,16 +158,16 @@ namespace QuanLyKhachSan.GUI
         /// <param name="e"></param>
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            if(dgvPhieuThanhToan.RowCount>0) // 
+            if(dgvKhachHang.RowCount>0) // 
             {
                 //lấy thông tin của khách hàng thuê phòng cho vào form hóa đơn
-                int i = dgvPhieuThanhToan.CurrentCell.RowIndex; //lấy chỉ số hàng
-                string str_mapt = dgvPhieuThanhToan.Rows[i].Cells["MaPT"].Value.ToString().Trim(); //lấy mã phiếu thuê
-                string str_TenKH = dgvPhieuThanhToan.Rows[i].Cells["TenKH"].Value.ToString().Trim();
-                string str_GioiTinh = dgvPhieuThanhToan.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
-                string str_SDT = dgvPhieuThanhToan.Rows[i].Cells["SDT"].Value.ToString().Trim();
-                string str_Email = dgvPhieuThanhToan.Rows[i].Cells["Email"].Value.ToString().Trim();
-                string str_CMND = dgvPhieuThanhToan.Rows[i].Cells["CMND"].Value.ToString().Trim();
+                int i = dgvKhachHang.CurrentCell.RowIndex; //lấy chỉ số hàng
+                string str_mapt = dgvKhachHang.Rows[i].Cells["MaPT"].Value.ToString().Trim(); //lấy mã phiếu thuê
+                string str_TenKH = dgvKhachHang.Rows[i].Cells["TenKH"].Value.ToString().Trim();
+                string str_GioiTinh = dgvKhachHang.Rows[i].Cells["GioiTinh"].Value.ToString().Trim();
+                string str_SDT = dgvKhachHang.Rows[i].Cells["SDT"].Value.ToString().Trim();
+                string str_Email = dgvKhachHang.Rows[i].Cells["Email"].Value.ToString().Trim();
+                string str_CMND = dgvKhachHang.Rows[i].Cells["CMND"].Value.ToString().Trim();
                 int int_TienPhong = dal_ThanhToan.TinhTienPhong(str_mapt.Trim());
                 int int_TienDV = dal_ThanhToan.TinhTienDichVu(str_mapt.Trim());
                 int int_TongTienTT = int_TienPhong + int_TienDV;
@@ -201,6 +194,42 @@ namespace QuanLyKhachSan.GUI
 
         }
 
+        private void frmThanhToan_Load(object sender, EventArgs e)
+        {
+            //định dạng lại cột chứa ngày tháng, vì khi up từ csdl mặc định MM/dd/yyyy
+            dgvKhachHang.Columns["NgayDen"].DefaultCellStyle.Format = "dd/MM/yyyy hh:mm:ss tt";
+            dgvKhachHang.Columns["NgayDi"].DefaultCellStyle.Format = "dd/MM/yyyy hh:mm:ss tt";
+            //Lấy Danh sách các khách hàng thuê phòng
+            dgvKhachHang.DataSource = dal_ThanhToan.ThongTinCacKhachHangThuePhong();
+
+            //lấy dữ liệu của phiếu thuê đầu tiên
+            if (dgvKhachHang.RowCount > 0)
+            {
+                string str_mapt = dgvKhachHang.Rows[0].Cells[0].Value.ToString().Trim();
+                lblTenKH.Text = dgvKhachHang.Rows[0].Cells[2].Value.ToString().Trim();
+                dgvPhong.DataSource = dal_ThanhToan.ThongTinCacPhongThueTheoMaPT(str_mapt.Trim());
+                dgvPhong.Columns["GiaTheoGio"].DefaultCellStyle.Format = "#,#";
+                dgvPhong.Columns["GiaTheoNgay"].DefaultCellStyle.Format = "#,#";
+                dgvDichVuDaSuDung.DataSource = dal_SDDV.ThongTinSuDungDichVuTheoMaPhieuThue(str_mapt.Trim());
+                dgvDichVuDaSuDung.Columns["GiaDV"].DefaultCellStyle.Format = "#,#";
+
+                //set thuộc tính min date ngày đi, sẽ có 2 trường hợp có thể xảy ra
+                //1. ngày đến của khách hàng < ngày hiện tại, 2.Ngày đến của khách hàng > ngày hiện tại
+                DateTime NgayDen = Convert.ToDateTime(dgvKhachHang.Rows[0].Cells["NgayDen"].Value.ToString());
+                if (NgayDen < DateTime.Now)
+                {
+                    dateNgayDi.MinDate = DateTime.Now;
+                    dateNgayDi.Value = dateNgayDi.MinDate;
+                }
+                else
+                {
+                    dateNgayDi.MinDate = NgayDen;
+                    dateNgayDi.Value = dateNgayDi.MinDate;
+                }
+                lblTongTienDV.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienDichVu(str_mapt.Trim()));
+                lblTienPhong.Text = string.Format("{0:n0}", dal_ThanhToan.TinhTienPhong(str_mapt.Trim()));
+            }
+        }
 
     }
 }

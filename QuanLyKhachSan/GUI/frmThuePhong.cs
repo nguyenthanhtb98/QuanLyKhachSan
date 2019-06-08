@@ -28,6 +28,10 @@ namespace QuanLyKhachSan.GUI
             dgvThuePhong.DataSource = dal_phong.ThongTinCacPhongConTrong();
             dgvThuePhong.Columns["GiaTheoGio"].DefaultCellStyle.Format = "#,#";
             dgvThuePhong.Columns["GiaTheoNgay"].DefaultCellStyle.Format = "#,#";
+
+            //set giới hạn thời gian thuê phòng
+            dateNgayDen.MinDate = DateTime.Now;
+         
         }
 
 
@@ -95,6 +99,11 @@ namespace QuanLyKhachSan.GUI
                 MessageBox.Show("Bạn cần chọn phòng");
             }
 
+        }
+
+        private void dateNgayDen_ValueChanged(object sender, EventArgs e)
+        {
+            dateNgayDi.MinDate = dateNgayDen.Value;
         }
     }
 }

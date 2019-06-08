@@ -37,7 +37,7 @@
             this.lblTenKH = new System.Windows.Forms.Label();
             this.dateNgayDi = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.dgvPhieuThanhToan = new System.Windows.Forms.DataGridView();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.MaPT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,7 +75,7 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThanhToan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVuDaSuDung)).BeginInit();
@@ -90,7 +90,7 @@
             this.panel3.Controls.Add(this.lblTenKH);
             this.panel3.Controls.Add(this.dateNgayDi);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.dgvPhieuThanhToan);
+            this.panel3.Controls.Add(this.dgvKhachHang);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -139,14 +139,14 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Đặt lại ngày giờ đi cho khách hàng:";
             // 
-            // dgvPhieuThanhToan
+            // dgvKhachHang
             // 
-            this.dgvPhieuThanhToan.AllowUserToAddRows = false;
-            this.dgvPhieuThanhToan.AllowUserToResizeColumns = false;
-            this.dgvPhieuThanhToan.AllowUserToResizeRows = false;
-            this.dgvPhieuThanhToan.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvPhieuThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuThanhToan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvKhachHang.AllowUserToAddRows = false;
+            this.dgvKhachHang.AllowUserToResizeColumns = false;
+            this.dgvKhachHang.AllowUserToResizeRows = false;
+            this.dgvKhachHang.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaPT,
             this.MaKH,
             this.TenKH,
@@ -164,15 +164,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Chartreuse;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPhieuThanhToan.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPhieuThanhToan.Location = new System.Drawing.Point(12, 51);
-            this.dgvPhieuThanhToan.Name = "dgvPhieuThanhToan";
-            this.dgvPhieuThanhToan.ReadOnly = true;
-            this.dgvPhieuThanhToan.RowHeadersVisible = false;
-            this.dgvPhieuThanhToan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuThanhToan.Size = new System.Drawing.Size(380, 240);
-            this.dgvPhieuThanhToan.TabIndex = 9;
-            this.dgvPhieuThanhToan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
+            this.dgvKhachHang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvKhachHang.Location = new System.Drawing.Point(12, 51);
+            this.dgvKhachHang.Name = "dgvKhachHang";
+            this.dgvKhachHang.ReadOnly = true;
+            this.dgvKhachHang.RowHeadersVisible = false;
+            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKhachHang.Size = new System.Drawing.Size(380, 240);
+            this.dgvKhachHang.TabIndex = 0;
+            this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
             // MaPT
             // 
@@ -572,9 +572,10 @@
             this.Name = "frmThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";
+            this.Load += new System.EventHandler(this.frmThanhToan_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThanhToan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
@@ -588,7 +589,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.DataGridView dgvPhieuThanhToan;
+        private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
