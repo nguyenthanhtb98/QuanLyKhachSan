@@ -54,6 +54,7 @@
             this.btnTroVe = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -222,6 +223,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.rdiNu);
             this.panel2.Controls.Add(this.rdiNam);
             this.panel2.Controls.Add(this.label1);
@@ -278,7 +280,7 @@
             this.btnSua.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(35, 62);
+            this.btnSua.Location = new System.Drawing.Point(50, 26);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 38);
             this.btnSua.TabIndex = 28;
@@ -290,7 +292,7 @@
             this.btnTroVe.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroVe.Appearance.Options.UseFont = true;
             this.btnTroVe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.ImageOptions.Image")));
-            this.btnTroVe.Location = new System.Drawing.Point(157, 62);
+            this.btnTroVe.Location = new System.Drawing.Point(160, 70);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(101, 38);
             this.btnTroVe.TabIndex = 31;
@@ -318,6 +320,18 @@
             this.label5.Size = new System.Drawing.Size(266, 17);
             this.label5.TabIndex = 14;
             this.label5.Text = "Danh sách các khách hàng đang thuê phòng";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Appearance.Options.UseFont = true;
+            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnXoa.Location = new System.Drawing.Point(160, 26);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(101, 38);
+            this.btnXoa.TabIndex = 67;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // frmKhachHang
             // 
@@ -365,5 +379,6 @@
         private System.Windows.Forms.RadioButton rdiNam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
     }
 }

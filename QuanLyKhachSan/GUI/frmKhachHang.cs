@@ -109,25 +109,25 @@ namespace QuanLyKhachSan.GUI
             }
         }
 
-        //private void btnXoa_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        int i = dgvKhachHang.CurrentCell.RowIndex;
-        //        string str_makh = dgvKhachHang.Rows[i].Cells["MaKH"].Value.ToString().Trim();
-        //        KhachHang kh = new KhachHang();
-        //        kh.MaKH = str_makh;
-        //        kh.TenKH = txtTenKH.Text.Trim();
-        //        dal_KhachHang.XoaKhachHang(kh);
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int i = dgvKhachHang.CurrentCell.RowIndex;
+                string str_makh = dgvKhachHang.Rows[i].Cells["MaKH"].Value.ToString().Trim();
+                KhachHang kh = new KhachHang();
+                kh.MaKH = str_makh;
+                kh.TenKH = txtTenKH.Text.Trim();
+                dal_KhachHang.XoaKhachHang(kh);
+                dgvKhachHang.DataSource = dal_KhachHang.ThongTinCacKhachHang();
+                MessageBox.Show("Đã xóa khách hàng có mã " + kh.MaKH.Trim() + " và tên " + kh.TenKH.Trim() + " thành công!");
+            }
+            catch (Exception)
+            {
 
-        //        dgvKhachHang.DataSource = dal_KhachHang.ThongTinCacKhachHang();
-        //        MessageBox.Show("Đã xóa khách hàng có mã " + kh.MaKH.Trim() + " và tên " + kh.TenKH.Trim() + " thành công!");
-        //    }
-        //    catch (Exception)
-        //    {
+                throw;
+            }
+        }
 
-        //        throw;
-        //    }
-        //}
     }
 }
