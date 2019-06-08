@@ -50,7 +50,7 @@
             this.btnTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.btnTrangBi = new DevExpress.XtraBars.BarButtonItem();
             this.btnTrangBiTheoPhong = new DevExpress.XtraBars.BarButtonItem();
-            this.btnKhachHang = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKhachHang2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.txtTenTaiKhoan = new DevExpress.XtraBars.BarStaticItem();
@@ -61,6 +61,7 @@
             this.btnLoaiDV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSKHDaThanhToan = new DevExpress.XtraBars.BarButtonItem();
             this.btnThongKePhong = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKhachHang = new DevExpress.XtraBars.BarButtonItem();
             this.rbbHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -111,7 +112,7 @@
             this.btnTaiKhoan,
             this.btnTrangBi,
             this.btnTrangBiTheoPhong,
-            this.btnKhachHang,
+            this.btnKhachHang2,
             this.barButtonItem7,
             this.barListItem1,
             this.txtTenTaiKhoan,
@@ -121,9 +122,10 @@
             this.btnDichVu,
             this.btnLoaiDV,
             this.btnDSKHDaThanhToan,
-            this.btnThongKePhong});
+            this.btnThongKePhong,
+            this.btnKhachHang});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 30;
+            this.ribbon.MaxItemId = 31;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbbHeThong,
@@ -291,16 +293,15 @@
             this.btnTrangBiTheoPhong.Name = "btnTrangBiTheoPhong";
             this.btnTrangBiTheoPhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTrangBiTheoPhong_ItemClick);
             // 
-            // btnKhachHang
+            // btnKhachHang2
             // 
-            this.btnKhachHang.Caption = "Khách hàng";
-            this.btnKhachHang.Id = 19;
-            this.btnKhachHang.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.iconfinder_user_male_3699;
-            this.btnKhachHang.LargeWidth = 90;
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnKhachHang2.Caption = "Khách hàng";
+            this.btnKhachHang2.Id = 19;
+            this.btnKhachHang2.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.iconfinder_user_male_3699;
+            this.btnKhachHang2.LargeWidth = 90;
+            this.btnKhachHang2.Name = "btnKhachHang2";
+            this.btnKhachHang2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhachHang_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -391,6 +392,17 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnThongKePhong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongKePhong_ItemClick);
             // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.Caption = "Thông tin khách hàng";
+            this.btnKhachHang.Id = 30;
+            this.btnKhachHang.ImageOptions.LargeImage = global::QuanLyKhachSan.Properties.Resources.iconfinder_user_male_3699;
+            this.btnKhachHang.LargeWidth = 90;
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhachHang_ItemClick);
+            // 
             // rbbHeThong
             // 
             this.rbbHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -405,6 +417,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnThuePhong);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnThanhToan);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSDDV);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnKhachHang);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Chức năng";
@@ -429,7 +442,6 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnPhong);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnKhachHang);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTaiKhoan);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBi);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTrangBiTheoPhong);
@@ -562,7 +574,7 @@
         private DevExpress.XtraBars.BarButtonItem btnTrangBiTheoPhong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem btnKhachHang;
+        private DevExpress.XtraBars.BarButtonItem btnKhachHang2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarListItem barListItem1;
         private DevExpress.XtraBars.BarStaticItem txtTenTaiKhoan;
@@ -578,5 +590,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage rbbThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbbTK;
         private DevExpress.XtraBars.BarButtonItem btnThongKePhong;
+        private DevExpress.XtraBars.BarButtonItem btnKhachHang;
     }
 }

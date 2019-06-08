@@ -119,13 +119,6 @@ namespace QuanLyKhachSan.GUI
 
         }
 
-        private void btnKhachHang_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            frmKhachHang frm = new frmKhachHang();
-            DongHetCacFormConKhac();
-            frm.MdiParent = this;
-            frm.Show();
-        }
 
         private void frmMenu2_Load(object sender, EventArgs e)
         {
@@ -176,6 +169,14 @@ namespace QuanLyKhachSan.GUI
             frmPrint frm = new frmPrint();
             frm.ThongKePhong();
             frm.ShowDialog();
+        }
+
+        private void btnKhachHang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
+            DongHetCacFormConKhac();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
