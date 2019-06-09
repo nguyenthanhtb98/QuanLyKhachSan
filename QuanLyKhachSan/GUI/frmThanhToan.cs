@@ -143,7 +143,7 @@ namespace QuanLyKhachSan.GUI
                 int int_TongTienTT = int_TienPhong + int_TienDV;
                 //làm print hóa  đơn kiểu mới, dev express
                 frmPrint frm = new frmPrint();
-                frm.InHoaDon(str_TenKH,str_GioiTinh,str_Email,str_SDT,str_CMND,int_TienDV,int_TienPhong,int_TongTienTT);
+                frm.InHoaDon(str_mapt,int_TienDV,int_TienPhong,int_TongTienTT);
                 frm.ShowDialog();
             }
             ////cái này cho form hóa đơn cũ, cùi hơn cái print của dev

@@ -13,13 +13,9 @@ namespace QuanLyKhachSan.ReportFile
             InitializeComponent();
         }
 
-        public void KhoiTaoDuLieu(string strTenKH, string strGT, string strEmail, string strSDT, string strCMND, int TienDV, int TienPhong, int TongTien)
+        public void KhoiTaoDuLieu(string strMaPT, int TienDV, int TienPhong, int TongTien)
         {
-            pTenKH.Value = strTenKH;
-            pGioiTinh.Value = strGT;
-            pSDT.Value = strSDT;
-            pEmail.Value = strEmail;
-            pCMND.Value = strCMND;
+            pMaPT.Value = strMaPT;
             pTienDV.Value = TienDV;
             pTienPhong.Value = TienPhong;
             pTongTien.Value = TongTien;
