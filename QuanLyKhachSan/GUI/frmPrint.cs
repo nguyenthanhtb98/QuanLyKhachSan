@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QuanLyKhachSan.ReportFile;
+using QuanLyKhachSan.DAL;
 
 namespace QuanLyKhachSan.GUI
 {
+   
     public partial class frmPrint : DevExpress.XtraEditors.XtraForm
     {
+        private DAL_Report dal_report = new DAL_Report();
         public frmPrint()
         {
             InitializeComponent();
@@ -29,6 +32,14 @@ namespace QuanLyKhachSan.GUI
         public void ThongKeDoanhThu()
         {
             ReportDoanhThu report = new ReportDoanhThu();
+            //tính tỷ lệ tiền dịch vụ, phòng, // có hàm percentage trong report của devexpress, nhưng chưa biết dùng nên dùng tạm cách này
+            int TongTienDV = dal_report.TongTienDV();
+            int TongTienPhong = dal_report.TongTienPhong();
+            float TiLeDoanhThuDV = (float)TongTienDV*100 / (TongTienDV + TongTienPhong);
+            string strTLDV = string.Format("{0:0.00} %", TiLeDoanhThuDV);
+            float TiLeDoanhThuPhong = 100 - TiLeDoanhThuDV;
+            string strTLPhong = string.Format("{0:0.00} %", TiLeDoanhThuPhong);
+            report.KhoiTao(strTLDV, strTLPhong);
             foreach (var item in report.Parameters)
             {
                 item.Visible = false;
@@ -39,6 +50,7 @@ namespace QuanLyKhachSan.GUI
         public void ThongKePhong()
         {
             ReportPhong report = new ReportPhong();
+
             foreach (var item in report.Parameters)
             {
                 item.Visible = false;

@@ -13,5 +13,10 @@ namespace QuanLyKhachSan.ReportFile
             InitializeComponent();
         }
 
+        public void KhoiTao(string strTiLeDoanhThuDV, string strTiLeDoanhThuPhong)
+        {
+            pTiLeDoanhThuDV.Value = strTiLeDoanhThuDV;
+            pTiLeDoanhThuPhong.Value = strTiLeDoanhThuPhong; 
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace QuanLyKhachSan.GUI
             lblTienDV.Text = string.Format("{0:n0}",HD.TienDV);
             lblTienPhong.Text = string.Format("{0:n0}",HD.TienPhong);          
             lblTongTienTT.Text = string.Format("{0:n0}", HD.TongTienTT);
-            lblNgayTT.Text = HD.NgayTT.ToString();
+            lblNgayTT.Text = string.Format("{0:dd/MM/yyyy hh:mm:ss tt}", HD.NgayTT);
         }
         //private string MaPT; //tạo biến lưu mã phiếu thuê từ form Thanh toán
         

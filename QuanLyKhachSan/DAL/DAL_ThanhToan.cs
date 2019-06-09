@@ -41,5 +41,6 @@ namespace QuanLyKhachSan.DAL
             return conn.LayGiaTriCuaHamTraVeKieuInt(str);
         }
 
+
     }
 }

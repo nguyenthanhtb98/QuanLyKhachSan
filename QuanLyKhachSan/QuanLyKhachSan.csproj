@@ -90,6 +90,7 @@
     <Compile Include="DAL\DAL_LoaiPhong.cs" />
     <Compile Include="DAL\DAL_PhieuThue.cs" />
     <Compile Include="DAL\DAL_Phong.cs" />
+    <Compile Include="DAL\DAL_Report.cs" />
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
     <Compile Include="DAL\DAL_ThanhToan.cs" />
     <Compile Include="DAL\DAL_TrangBi.cs" />
