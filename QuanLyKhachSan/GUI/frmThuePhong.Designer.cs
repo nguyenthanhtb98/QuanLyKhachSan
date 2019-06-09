@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rdiNu = new System.Windows.Forms.RadioButton();
@@ -60,9 +60,12 @@
             this.GiaTheoGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaTheoNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numSoNguoi = new System.Windows.Forms.NumericUpDown();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuePhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoNguoi)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewImageColumn1
@@ -76,6 +79,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.LightSalmon;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.numSoNguoi);
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.rdiNu);
             this.panel4.Controls.Add(this.btnQuayLai);
             this.panel4.Controls.Add(this.rdiNam);
@@ -104,7 +109,7 @@
             // rdiNu
             // 
             this.rdiNu.AutoSize = true;
-            this.rdiNu.Location = new System.Drawing.Point(221, 91);
+            this.rdiNu.Location = new System.Drawing.Point(147, 91);
             this.rdiNu.Name = "rdiNu";
             this.rdiNu.Size = new System.Drawing.Size(39, 17);
             this.rdiNu.TabIndex = 63;
@@ -128,7 +133,7 @@
             // 
             this.rdiNam.AutoSize = true;
             this.rdiNam.Checked = true;
-            this.rdiNam.Location = new System.Drawing.Point(139, 91);
+            this.rdiNam.Location = new System.Drawing.Point(91, 91);
             this.rdiNam.Name = "rdiNam";
             this.rdiNam.Size = new System.Drawing.Size(47, 17);
             this.rdiNam.TabIndex = 62;
@@ -321,14 +326,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThuePhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThuePhong.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Chartreuse;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvThuePhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Chartreuse;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThuePhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvThuePhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThuePhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ChonThue,
@@ -338,14 +343,14 @@
             this.GiaTheoGio,
             this.GiaTheoNgay,
             this.TenLoaiPhong});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Chartreuse;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvThuePhong.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Chartreuse;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThuePhong.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvThuePhong.Location = new System.Drawing.Point(31, 31);
             this.dgvThuePhong.Name = "dgvThuePhong";
             this.dgvThuePhong.RowHeadersVisible = false;
@@ -401,6 +406,38 @@
             this.TenLoaiPhong.HeaderText = "Loại Phòng";
             this.TenLoaiPhong.Name = "TenLoaiPhong";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(222, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 17);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Số người";
+            // 
+            // numSoNguoi
+            // 
+            this.numSoNguoi.Location = new System.Drawing.Point(306, 90);
+            this.numSoNguoi.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numSoNguoi.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numSoNguoi.Name = "numSoNguoi";
+            this.numSoNguoi.Size = new System.Drawing.Size(47, 20);
+            this.numSoNguoi.TabIndex = 65;
+            this.numSoNguoi.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // frmThuePhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +453,7 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuePhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSoNguoi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,5 +490,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiPhong;
         private System.Windows.Forms.RadioButton rdiNu;
         private System.Windows.Forms.RadioButton rdiNam;
+        private System.Windows.Forms.NumericUpDown numSoNguoi;
+        private System.Windows.Forms.Label label6;
     }
 }

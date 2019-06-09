@@ -55,6 +55,14 @@ namespace QuanLyKhachSan.Values_Object
             get { return _Email; }
             set { _Email = value; }
         }
-        
+
+        private int _SoNguoi;
+
+        public int SoNguoi
+        {
+            get { return _SoNguoi; }
+            set { _SoNguoi = value; }
+        }
+
     }
 }

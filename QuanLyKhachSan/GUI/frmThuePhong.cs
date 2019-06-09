@@ -66,6 +66,7 @@ namespace QuanLyKhachSan.GUI
                 kh.SDT = txtSDT.Text;
                 kh.Email = txtEmail.Text;
                 kh.CMND = txtCMND.Text;
+                kh.SoNguoi = Convert.ToInt32(numSoNguoi.Value.ToString());
                 dal_khachhang.ThemKhachHang(kh);
                 string str_MaKHVuaThem = dal_khachhang.LayMaKHVuaThem();
                 //Thêm vào bảng Phiếu thuê mã khách hàng, ngày đén ngày đi, hình thức thuê

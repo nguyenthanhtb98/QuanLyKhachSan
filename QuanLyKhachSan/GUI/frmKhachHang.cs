@@ -32,6 +32,7 @@ namespace QuanLyKhachSan.GUI
             txtSDT.Text = dgvKhachHang.Rows[index].Cells["SDT"].Value.ToString();
             txtEmail.Text = dgvKhachHang.Rows[index].Cells["Email"].Value.ToString();
             txtCMND.Text = dgvKhachHang.Rows[index].Cells["CMND"].Value.ToString();
+            numSoNguoi.Value = Convert.ToDecimal(dgvKhachHang.Rows[index].Cells["SoNguoi"].Value.ToString().Trim());
         }
 
         private void btnTroVe_Click(object sender, EventArgs e)
@@ -82,7 +83,7 @@ namespace QuanLyKhachSan.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            try
+            if(dgvKhachHang.RowCount>0)
             {
                 int i = dgvKhachHang.CurrentCell.RowIndex;
                 string str_makh = dgvKhachHang.Rows[i].Cells["MaKH"].Value.ToString().Trim();
@@ -97,21 +98,18 @@ namespace QuanLyKhachSan.GUI
                 kh.SDT = txtSDT.Text.Trim();
                 kh.Email = txtEmail.Text.Trim();
                 kh.CMND = txtCMND.Text.Trim();
+                kh.SoNguoi = Convert.ToInt32(numSoNguoi.Value.ToString());
                 dal_KhachHang.SuaKhachHang(kh);
 
                 dgvKhachHang.DataSource = dal_KhachHang.ThongTinCacKhachHang();
                 MessageBox.Show("Sửa thông tin khách hàng thành công!");
             }
-            catch (Exception)
-            {
 
-                throw;
-            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+            if(dgvKhachHang.RowCount>0)
             {
                 int i = dgvKhachHang.CurrentCell.RowIndex;
                 string str_makh = dgvKhachHang.Rows[i].Cells["MaKH"].Value.ToString().Trim();
@@ -121,11 +119,6 @@ namespace QuanLyKhachSan.GUI
                 dal_KhachHang.XoaKhachHang(kh);
                 dgvKhachHang.DataSource = dal_KhachHang.ThongTinCacKhachHang();
                 MessageBox.Show("Đã xóa khách hàng có mã " + kh.MaKH.Trim() + " và tên " + kh.TenKH.Trim() + " thành công!");
-            }
-            catch (Exception)
-            {
-
-                throw;
             }
         }
 
