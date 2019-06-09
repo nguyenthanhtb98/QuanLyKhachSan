@@ -178,5 +178,11 @@ namespace QuanLyKhachSan.GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void btnThongTinUngDung_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DongHetCacFormConKhac();
+            MessageBox.Show("Design by:   NGUYỄN VĂN CÔNG - CNTT15 - MTA","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }

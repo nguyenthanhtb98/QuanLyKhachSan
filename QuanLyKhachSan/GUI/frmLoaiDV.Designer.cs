@@ -191,7 +191,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "frmLoaiDV";
-            this.Text = "frmLoaiDV";
+            this.Text = "Loại dịch vụ";
             this.Load += new System.EventHandler(this.frmLoaiDV_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDV)).EndInit();

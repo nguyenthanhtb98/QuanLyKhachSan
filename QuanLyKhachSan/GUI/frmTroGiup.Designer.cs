@@ -144,7 +144,7 @@
             this.Controls.Add(this.pnlTroGiup_ThanhToan);
             this.Controls.Add(this.pnlTroGiup_ThuePhong);
             this.Name = "frmTroGiup";
-            this.Text = "frmTroGiup";
+            this.Text = "Trợ giúp";
             this.Load += new System.EventHandler(this.frmTroGiup_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

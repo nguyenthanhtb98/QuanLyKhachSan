@@ -56,7 +56,7 @@
             this.txtTenTaiKhoan = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTroGiup = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThongTinUngDung = new DevExpress.XtraBars.BarButtonItem();
             this.btnDichVu = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiDV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDSKHDaThanhToan = new DevExpress.XtraBars.BarButtonItem();
@@ -118,7 +118,7 @@
             this.txtTenTaiKhoan,
             this.barButtonItem9,
             this.btnTroGiup,
-            this.barButtonItem10,
+            this.btnThongTinUngDung,
             this.btnDichVu,
             this.btnLoaiDV,
             this.btnDSKHDaThanhToan,
@@ -339,14 +339,15 @@
             this.btnTroGiup.Name = "btnTroGiup";
             this.btnTroGiup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTroGiup_ItemClick);
             // 
-            // barButtonItem10
+            // btnThongTinUngDung
             // 
-            this.barButtonItem10.Caption = "Thông tin ứng dụng";
-            this.barButtonItem10.Id = 25;
-            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.barButtonItem10.LargeWidth = 90;
-            this.barButtonItem10.Name = "barButtonItem10";
+            this.btnThongTinUngDung.Caption = "Thông tin ứng dụng";
+            this.btnThongTinUngDung.Id = 25;
+            this.btnThongTinUngDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.btnThongTinUngDung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.btnThongTinUngDung.LargeWidth = 90;
+            this.btnThongTinUngDung.Name = "btnThongTinUngDung";
+            this.btnThongTinUngDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTinUngDung_ItemClick);
             // 
             // btnDichVu
             // 
@@ -484,7 +485,7 @@
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.btnTroGiup);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnThongTinUngDung);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.ShowCaptionButton = false;
             this.ribbonPageGroup7.Text = "Trợ giúp";
@@ -582,7 +583,7 @@
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.BarButtonItem btnTroGiup;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem btnThongTinUngDung;
         private DevExpress.XtraBars.BarButtonItem btnDichVu;
         private DevExpress.XtraBars.BarButtonItem btnLoaiDV;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
